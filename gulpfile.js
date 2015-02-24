@@ -21,23 +21,20 @@ var notify = require('gulp-notify');
 gulp.task('css', function() {
   gulp.src('scss/**/*.scss')
     .pipe(sourcemaps.init())
-      .pipe(sass())
+    .pipe(sass())
 
-      // auto prefix css
-      .pipe(prefix('last 2 versions'))
+    // auto prefix css
+    .pipe(prefix('last 2 versions'))
 
-    .pipe(sourcemaps.write())
-
-    // move expanded css file to folder
-    .pipe(gulp.dest('css/'))
+    // minify the css file
+    .pipe(minifycss())
 
     // rename css file with .min
     .pipe(rename({
       suffix: '.min'
     }))
 
-    // minify the css file
-    .pipe(minifycss())
+    .pipe(sourcemaps.write())
 
     // move minified css file to folder
     .pipe(gulp.dest('css/'))
