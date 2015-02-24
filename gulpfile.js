@@ -2,40 +2,50 @@
 var gulp = require('gulp');
 
 // Include plugins
-var sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
-    prefix = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    notify = require('gulp-notify');
+// Sass / CSS
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var prefix = require('gulp-autoprefixer');
+var minifycss = require('gulp-minify-css');
 
-// Task - compile sass
+// Rename files
+var rename = require('gulp-rename');
+
+// notify when task is complete
+var notify = require('gulp-notify');
+
+
+
+// Tasks
+// Compile sass
 gulp.task('css', function() {
-  .pipe(sourcemaps.init())
-  .pipe(sass())
-  .pipe(sourcemaps.write())
+  gulp.src('scss/**/*.scss')
+    .pipe(sourcemaps.init())
+      .pipe(sass())
 
-  // auto prefix css
-  .pipe(prefix('last 2 versions'))
+      // auto prefix css
+      .pipe(prefix('last 2 versions'))
 
-  // move expanded css file to folder
-  .pipe(gulp.dest('css/')
+    .pipe(sourcemaps.write())
 
-  // rename css file with .min
-  .pipe(rename({
-    suffix: '.min'
-  }))
+    // move expanded css file to folder
+    .pipe(gulp.dest('css/'))
 
-  // minify the css file
-  .pipe(minifycss())
+    // rename css file with .min
+    .pipe(rename({
+      suffix: '.min'
+    }))
 
-  // move minified css file to folder
-  .pipe(gulp.dest('css/'))
+    // minify the css file
+    .pipe(minifycss())
 
-  // notify to say the task has complete
-  .pipe(notify({
+    // move minified css file to folder
+    .pipe(gulp.dest('css/'))
+
+    // notify to say the task has complete
+    .pipe(notify({
       message: 'CSS task complete'
-  }));
+    }))
 });
 
 // Watch files for changes
