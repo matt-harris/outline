@@ -1,0 +1,92 @@
+//---------------------------------------------//
+// Helper classes - Outline
+//---------------------------------------------//
+
+// clearfix
+.clearfix,
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// align
+.align-center,
+%align-center {
+  text-align: center;
+}
+
+.align-right,
+%align-right {
+  text-align: right;
+}
+
+.align-left,
+%align-left {
+  text-align: left;
+}
+
+// floats
+.float-center,
+%float-center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.float-right,
+%float-right {
+  float: right;
+}
+
+.float-left,
+%float-left {
+  float: left;
+}
+
+.no-space,
+%no-space {
+  margin: 0;
+  padding: 0;
+}
+
+// center image
+.img-center,
+%img-center {
+  display: block;
+  margin: 0 auto $spacing 0;
+}
+
+// hide from browsers & screenreaders
+.hide,
+%hide {
+  display: none;
+  visibility: hidden;
+}
+
+// hide visually, but available for screenreaders
+.visuallyhidden,
+%visuallyhidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+// extends the .visuallyhidden class to allow the element to
+// be focusable when navigated to via the keyboard
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  margin: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+}
