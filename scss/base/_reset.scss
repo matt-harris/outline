@@ -1,0 +1,157 @@
+//---------------------------------------------//
+// CSS Reset - Outline
+// A mixture of Normalized.css & Meyer's CSS
+// Reset & custom code
+//---------------------------------------------//
+
+// viewport resizing
+@-webkit-viewport   { width: device-width; zoom: 1.0; }
+@-moz-viewport      { width: device-width; zoom: 1.0; }
+@-ms-viewport       { width: device-width; zoom: 1.0; }
+@-o-viewport        { width: device-width; zoom: 1.0; }
+@viewport           { width: device-width; zoom: 1.0; }
+
+// remove defaults
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+// correct block display for HTML5 elements on older browsers
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+// box model
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+}
+
+// html & body to inherit height of the viewport
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background: #fff;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+// correct inline-block display not defined in IE 8/9
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+// address outline inconsistency between Chrome and other browsers
+a:focus {
+  outline: thin dotted;
+}
+
+// improve readability when focused and also mouse hovered in all browsers
+a:active,
+a:hover {
+  outline: 0;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+// Remove most spacing between table cells
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// resize img's and video to scale with container
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+// Prevent iframe, object, and embed elements from
+// spilling outside of the page on smaller screens
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+
+// help ie render img's when scaled
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// improve usability and consistency of cursor style between inputs
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// remove inner padding and border in Firefox 4+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
