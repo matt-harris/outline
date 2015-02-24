@@ -1,0 +1,33 @@
+//---------------------------------------------//
+// 	Variables - Outline
+//	all variables...
+//---------------------------------------------//
+
+// html
+$html-font-base: 100%; // 16px
+$font-base: 1rem; // 16px - change to font-base you require 1rem = 16px
+$spacing: 1.5rem; // 24px
+
+// fonts
+$font-primary: 'Merriweather', serif; // body font
+$font-secondary: 'Lato', sans-serif; // title font
+$font-monospace: Monaco, Consolas, "Lucida Console", monospace;
+
+// colours
+$color-primary: #2397e8;
+$color-secondary: #f6503d;
+$color-tertiary: #42c065;
+$color-white: #fff;
+$color-grey: #ccc;
+$color-grey-light: #e0e0e0;;
+$color-grey-dark: #333;
+
+// Breakpoints
+$mobileLandscape: 30rem; // 480px
+$tablet: 40rem; // 640px
+$tabletWide: 48rem; // 768px
+$desktop: 64rem; // 1024px
+$widescreen: 71.25rem; // 1140px
+
+
+
