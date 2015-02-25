@@ -9,6 +9,7 @@
 // Utilities - make sure you import variables first
 @import
   "utils/variables",
+  "utils/mixins",
   "utils/helpers";
 
 // Base
@@ -20,8 +21,10 @@
 
 // Components
 @import
+  "components/buttons",
   "components/embed",
-  "components/lists";
+  "components/lists",
+  "components/tables";
 
 // Pages
 

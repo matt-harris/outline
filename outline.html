@@ -6,28 +6,241 @@
     <title>Enter your page title here</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- google fonts -->
     <link href='//fonts.googleapis.com/css?family=Lato:400,700,900|Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- site style -->
     <link href="css/outline.css" media="all" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div class="container">
       <h1>Hello! This is Outline.</h1>
 
-      <ol>
-        <li>one</li>
-        <li>two</li>
+      <!-- Lists -->
+      <h2>Lists</h2>
+
+      <ul>
         <li>
-          three
-            <ol>
-              <li>One
-            <ol>
-              <li>One</li>
-            </ol>
-              </li>
-            </ol>
+          One
+          <ul>
+            <li>One nested</li>
+            <li>
+              Two nested
+              <ul>
+                <li>One nested</li>
+                <li>Two nested</li>
+              </ul>
+            </li>
+          </ul>
         </li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+
+      <ol>
+        <li>
+          One
+          <ol>
+            <li>One nested</li>
+            <li>
+              Two nested
+              <ol>
+                <li>One nested</li>
+                <li>Two nested</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>Two</li>
+        <li>Three</li>
       </ol>
+
+      <dl>
+        <dt>Term 1</dt>
+        <dd>Definition of term 1</dd>
+        <dt>Term 2</dt>
+        <dd>Definition of term 2</dd>
+        <dt>Term 3</dt>
+        <dd>Definition of term 3</dd>
+      </dl>
+
+      <!-- Tables -->
+      <h2>Tables</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Posistion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>Mesut Özil</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Jack Wilshere</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Olivier Giroud</td>
+            <td>Forward</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table-stripes">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Posistion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>Mesut Özil</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Jack Wilshere</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Olivier Giroud</td>
+            <td>Forward</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table-border">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Posistion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>Mesut Özil</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Jack Wilshere</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Olivier Giroud</td>
+            <td>Forward</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table-border-rows">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Posistion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>Mesut Özil</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Jack Wilshere</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Olivier Giroud</td>
+            <td>Forward</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table-border-cells">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Posistion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>Mesut Özil</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Jack Wilshere</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Olivier Giroud</td>
+            <td>Forward</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="table-condensed">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Posistion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>Mesut Özil</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Jack Wilshere</td>
+            <td>Midfielder</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Olivier Giroud</td>
+            <td>Forward</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- embed -->
+      <h2>Embedded content</h2>
+
+      <div class="embed-wrap">
+        <iframe width="500" height="281" src="//www.youtube.com/embed/y58C1y8VkqM" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="embed-wrap">
+        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=bristol&amp;aq=&amp;sll=51.468489,-2.590709&amp;sspn=0.321233,0.837021&amp;ie=UTF8&amp;hq=&amp;hnear=Bristol,+City+of+Bristol,+United+Kingdom&amp;ll=51.468552,-2.590714&amp;spn=0.321332,0.837021&amp;t=m&amp;z=11&amp;output=embed&amp;iwloc=near"></iframe>
+      </div>
+
     </div>
   </body>
 </html>
