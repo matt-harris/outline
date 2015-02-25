@@ -4,7 +4,7 @@ var gulp = require('gulp');
 // Include plugins
 // Sass / CSS
 var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+//var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 
@@ -20,7 +20,7 @@ var notify = require('gulp-notify');
 // Compile sass
 gulp.task('css', function() {
   gulp.src('scss/**/*.scss')
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(sass())
 
     // auto prefix css
@@ -29,15 +29,10 @@ gulp.task('css', function() {
     // minify the css file
     .pipe(minifycss())
 
-    // rename css file with .min
-    .pipe(rename({
-      suffix: '.min'
-    }))
-
-    .pipe(sourcemaps.write())
-
-    // move minified css file to folder
+    // move css file to folder
     .pipe(gulp.dest('css/'))
+
+    //.pipe(sourcemaps.write())
 
     // notify to say the task has complete
     .pipe(notify({
