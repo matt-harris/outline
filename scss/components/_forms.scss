@@ -1,0 +1,104 @@
+//---------------------------------------------//
+// Forms - Outline
+// Basic styles for form elements
+//---------------------------------------------//
+
+form,
+fieldset {
+  margin-bottom: $spacing;
+}
+
+label {
+  display: block;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+
+fieldset {
+  margin: $spacing 0;
+  padding: $spacing;
+  border: solid .0625rem $color-grey;
+}
+
+legend {
+  display: block;
+  margin: 0;
+  margin-left: -.5rem;
+  padding: 0 .5rem;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  margin-bottom: $spacing;
+  padding: .375rem;
+  font: inherit;
+  line-height: 1.5;
+  color: $color-grey-dark;
+  border: .0625rem solid $color-grey;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  height: 5.5rem; // roughly 3 lines in height
+}
+
+// inputs 'inline-block' by default
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 0;
+  padding: .375rem;
+  cursor: pointer;
+  vertical-align: baseline;
+}
+
+// extend '.btn' & 'btn-large' styles to the submit button
+input[type="submit"] {
+  @extend .btn;
+  width: auto;
+
+  &.btn-large {
+    @extend .btn-large;
+  }
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: $color-primary;
+  border-color: rgba($color-primary, .8);
+  outline: 0;
+  outline: thin dotted \9; // IE6-9
+  @include single-transition(border, 0.2s, linear)
+}
+
+input[disabled],
+textarea[disabled] {
+  background: tint($color-grey, 10%);
+  cursor: not-allowed;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// inline form styles
+.form-inline {
+  .form-row {
+    @extend %clearfix;
+  }
+  input,
+  textarea,
+  select {
+    display: inline-block;
+    width: auto;
+  }
+  label {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+  }
+}

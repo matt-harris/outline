@@ -1,0 +1,55 @@
+//---------------------------------------------//
+// Tables - Outline
+// Basic styles for tables
+//---------------------------------------------//
+
+table {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: $spacing;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 0;
+
+  th,
+  tfoot td {
+    text-align: left;
+    font-weight: 700;
+  }
+
+  th,
+  td {
+    padding: .625rem;
+    vertical-align: top;
+  }
+}
+
+.table-stripes {
+  tbody > tr:nth-child(odd) > td {
+    background-color: tint($color-grey-light, 50%);
+  }
+}
+
+.table-border {
+  border: .0625rem solid $color-grey;
+}
+
+.table-border-rows {
+  tr {
+    border-bottom: .0625rem solid $color-grey;
+  }
+}
+
+.table-border-cells {
+  th,
+  td {
+    border: .0625rem solid $color-grey;
+  }
+}
+
+.table-condensed {
+  th,
+  td {
+    padding: .25rem;
+  }
+}
