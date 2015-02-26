@@ -1,0 +1,44 @@
+//---------------------------------------------//
+// Media - Outline
+// Basic styling for media object
+//
+// Place any image and text-like content side-by-side:
+// http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+//
+//  <div class="media">
+//    <img class="media-img" src="/img/path-to-image.jpg" alt="Image alt text">
+//    <p class=media-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+//    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+//  </div>
+//
+//---------------------------------------------//
+
+.media {
+  display: block;
+  margin-bottom: $spacing;
+  @extend %clearfix;
+}
+
+.media-img {
+  float: left;
+  margin: 0 $spacing $spacing 0;
+}
+
+// Reversed image - right instead of left
+.media-img_reversed {
+  float: right;
+  margin-left: $spacing;
+}
+
+.media-img img,
+.media-img_reversed img {
+  display: block;
+}
+
+.media-body {
+  overflow: hidden;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
