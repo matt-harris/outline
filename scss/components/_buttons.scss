@@ -7,10 +7,12 @@
 %btn {
   display: inline-block;
   padding: .375rem 1rem;
+  margin-bottom: 1rem;
   font-family: $font-secondary;
   font-size: inherit;
   font-weight: normal;
   text-align: center;
+  vertical-align: middle;
   color: $color-white;
   background-color: $color-primary;
   border: none;
@@ -26,7 +28,6 @@
   }
 
   &.btn-disabled, &[disabled] {
-    pointer-events: none;
     cursor: not-allowed;
     opacity: .6;
   }

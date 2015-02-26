@@ -4,6 +4,8 @@
 // Free to use under the MIT License
 //---------------------------------------------//
 
+@import "../bower_components/susy/sass/susy";
+
 // Vendors and external stylesheets
 
 // Utilities - make sure you import variables first
@@ -15,15 +17,20 @@
 // Base
 @import
   "base/print",
-  "base/reset";
+  "base/reset",
+  "base/typography";
 
 // Layout
 
 // Components
 @import
   "components/buttons",
+  "components/code",
   "components/embed",
+  "components/forms",
   "components/lists",
+  "components/media",
+  "components/pagination",
   "components/tables";
 
 // Pages

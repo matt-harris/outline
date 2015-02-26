@@ -17,7 +17,7 @@ label {
 fieldset {
   margin: $spacing 0;
   padding: $spacing;
-  border: solid .0625rem $color-grey;
+  border: .0625rem solid $color-grey;
 }
 
 legend {
@@ -60,11 +60,11 @@ input[type="radio"] {
 
 // extend '.btn' & 'btn-large' styles to the submit button
 input[type="submit"] {
-  @extend .btn;
+  @extend %btn;
   width: auto;
 
   &.btn-large {
-    @extend .btn-large;
+    @extend %btn-large;
   }
 }
 
@@ -75,12 +75,12 @@ textarea:focus {
   border-color: rgba($color-primary, .8);
   outline: 0;
   outline: thin dotted \9; // IE6-9
-  @include single-transition(border, 0.2s, linear)
+  transition: border .2s linear;
 }
 
 input[disabled],
 textarea[disabled] {
-  background: tint($color-grey, 10%);
+  background: tint($color-grey-light, 50%);
   cursor: not-allowed;
   overflow: hidden;
   white-space: nowrap;
