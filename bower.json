@@ -1,0 +1,21 @@
+{
+  "name": "outline",
+  "version": "0.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "Matt Harris"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.2"
+  }
+}
