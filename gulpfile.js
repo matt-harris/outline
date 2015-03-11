@@ -11,6 +11,9 @@ var uglify = require('gulp-uglify');
 
 var images = require('gulp-imagemin');
 
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+
 var sourcemaps = require('gulp-sourcemaps');
 var changed = require('gulp-changed');
 var notify = require('gulp-notify');
@@ -81,11 +84,27 @@ gulp.task('images', function() {
   }))
 });
 
+// Reload browser
+gulp.task('reload', function () {
+  browserSync.reload();
+});
+
+// Prepare Browser-sync
+gulp.task('browser-sync', function() {
+  browserSync.init(['scss/**/*.scss', 'js/*.js'], {
+  //proxy: 'your_dev_site.url'
+    server: {
+        baseDir: './'
+    }
+  });
+});
+
 // Watch files for changes
 gulp.task('watch', function() {
   gulp.watch('scss/**/*.scss', ['css']);
   gulp.watch('js/*.js', ['js']);
+  gulp.watch(['*.html'], ['reload']);
 });
 
 // Default Task
-gulp.task('default', ['css', 'js', 'images', 'watch']);
+gulp.task('default', ['css', 'js', 'images', 'browser-sync', 'watch']);
