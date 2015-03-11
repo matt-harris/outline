@@ -1,20 +1,20 @@
 //---------------------------------------------//
 //  Embed containers - Outline
 //  Basic styles to make embedded content responsive
- //---------------------------------------------//
+//---------------------------------------------//
 
- .embed-wrap {
-    position: relative;
-    width: 90%;
-    margin: $spacing auto;
-    padding: 1.875rem 0 56.25% 0;
-    height: 0;
-    overflow: hidden;
+.embed-wrap {
+  position: relative;
+  width: 90%;
+  margin: $spacing auto;
+  padding: 1.875rem 0 56.25% 0;
+  height: 0;
+  overflow: hidden;
 
-    iframe {
-      position: absolute;
-      top:0; left: 0;
-      width: 100%;
-      height: 100%;
-    }
- }
+  iframe {
+    position: absolute;
+    top:0; left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
