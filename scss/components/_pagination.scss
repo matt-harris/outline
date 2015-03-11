@@ -6,9 +6,8 @@
 .pager {
   margin-bottom: $spacing;
   font-family: $font-primary;
-  font-size: 1rem;
   text-align: center;
-  @extend %list-unstyled;
+  @extend %list--unstyled;
 
   li {
     display: inline-block;
@@ -28,7 +27,7 @@
       padding: .25rem .75rem;
     }
 
-    &.pager-current {
+    &.pager--current {
       background-color: $color-primary;
       color: $color-white;
       padding: .25rem .75rem;
