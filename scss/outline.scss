@@ -4,9 +4,11 @@
 // Free to use under the MIT License
 //---------------------------------------------//
 
-@import "../bower_components/susy/sass/susy";
+@import "../susy/susy";
 
 // Vendors and external stylesheets
+@import
+  "vendors/font-awesome";
 
 // Utilities - make sure you import variables first
 @import
@@ -21,6 +23,8 @@
   "base/typography";
 
 // Layout
+@import
+  "layout/susy-config";
 
 // Components
 @import
@@ -36,3 +40,5 @@
 // Pages
 
 // Themes
+@import
+  "themes/outline";

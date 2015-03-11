@@ -1,0 +1,25 @@
+.rocket {
+  @include icon(rocket);
+}
+
+.play {
+  @include icon-before(wrench);
+}
+
+.content {
+  height: 400px;
+  background-color: red;
+
+  @include respond-min($tabletWide) {
+    @include span(3 of 4);
+  }
+}
+
+.sidebar {
+  height: 400px;
+  background-color: blue;
+
+  @include respond-min($tabletWide) {
+    @include span(1 of 4 last);
+  }
+}

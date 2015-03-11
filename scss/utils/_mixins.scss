@@ -1,11 +1,26 @@
 //---------------------------------------------//
 // Mixins - Outline
-// e.g. @include
+// e.g. @include respond-min($tablet) {
+//        background-color: $color-primary;
+//      }
 //---------------------------------------------//
 
 @mixin respond-min($width) {
   @media screen and (min-width: $width) {
     @content;
+  }
+}
+
+@mixin icon($icon) {
+  @extend %icon;
+  @extend %icon-#{$icon};
+}
+
+@mixin icon-before($icon, $padding: .5rem) {
+  &:before {
+    @extend %icon;
+    @extend %icon-#{$icon};
+    padding-right: $padding;
   }
 }
 

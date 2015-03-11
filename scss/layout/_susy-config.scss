@@ -1,0 +1,14 @@
+//---------------------------------------------//
+// Susy config (2.2.1)
+//---------------------------------------------//
+
+$susy: (
+  columns: 16,
+  debug: (image:show),
+  gutters : .25,
+);
+
+.container {
+  @include container(71.25rem);
+  height: 100vh;
+}

@@ -53,3 +53,9 @@ table {
     padding: .25rem;
   }
 }
+
+// responsive table container
+.table-responsive {
+  overflow: auto;
+  width: 100%;
+}
