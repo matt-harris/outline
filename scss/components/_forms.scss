@@ -58,14 +58,10 @@ input[type="radio"] {
   vertical-align: baseline;
 }
 
-// extend '.btn' & 'btn-large' styles to the submit button
+// extend '.btn'
 input[type="submit"] {
   @extend %btn;
   width: auto;
-
-  &.btn-large {
-    @extend %btn-large;
-  }
 }
 
 input:focus,
@@ -88,15 +84,18 @@ textarea[disabled] {
 
 // inline form styles
 .form-inline {
+
   .form-row {
     @extend %clearfix;
   }
+
   input,
   textarea,
   select {
     display: inline-block;
     width: auto;
   }
+
   label {
     display: inline-block;
     margin: 0 1rem 0 0;
