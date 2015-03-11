@@ -2,13 +2,17 @@
 var gulp = require('gulp');
 
 // Include plugins
-// Sass / CSS
 var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
 var prefix = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 
-// notify when task is complete
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+
+var images = require('gulp-imagemin');
+
+var sourcemaps = require('gulp-sourcemaps');
+var changed = require('gulp-changed');
 var notify = require('gulp-notify');
 
 
@@ -25,13 +29,13 @@ gulp.task('css', function() {
   // auto prefix css
   .pipe(prefix('last 2 versions'))
 
-  // minify the css file
+  // minify the file
   .pipe(minifycss())
+
+  .pipe(sourcemaps.write())
 
   // move css file to folder
   .pipe(gulp.dest('css/'))
-
-  .pipe(sourcemaps.write())
 
   // notify to say the task has complete
   .pipe(notify({
@@ -41,6 +45,18 @@ gulp.task('css', function() {
 
 // Concatenate js files and minify
 gulp.task('js', function() {
+  gulp.src('js/*.js')
+  .pipe(sourcemaps.init())
+
+  .pipe(concat('bundle.js'))
+
+  // minify the file
+  .pipe(uglify())
+
+  .pipe(sourcemaps.write())
+
+  // move js file to folder
+  .pipe(gulp.dest('js/min/'))
 
   // notify to say the task has complete
   .pipe(notify({
@@ -50,6 +66,14 @@ gulp.task('js', function() {
 
 // Compress images
 gulp.task('images', function() {
+  gulp.src('img/*.{png,jpg,gif}')
+  .pipe(changed('img/min'))
+  .pipe(images({
+    optimizationLevel: 4,
+    progressive: true,
+    interlaced: true
+  }))
+  .pipe(gulp.dest('img/min/'))
 
   // notify to say the task has complete
   .pipe(notify({
@@ -60,7 +84,8 @@ gulp.task('images', function() {
 // Watch files for changes
 gulp.task('watch', function() {
   gulp.watch('scss/**/*.scss', ['css']);
+  gulp.watch('js/*.js', ['js']);
 });
 
 // Default Task
-gulp.task('default', ['css', 'watch']);
+gulp.task('default', ['css', 'js', 'images', 'watch']);
