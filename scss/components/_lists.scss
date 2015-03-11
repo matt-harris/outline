@@ -5,7 +5,8 @@
 
 ul,
 ol,
-dl {
+dl,
+.list {
   margin-bottom: $spacing;
   margin-left: 1.75rem;
   font-family: inherit;
@@ -51,14 +52,14 @@ dt {
   font-weight: bold;
 }
 
-.list-unstyled,
-%list-unstyled {
+.list--unstyled,
+%list--unstyled {
   margin-left: 0;
   list-style: none;
 }
 
-.list-inline,
-%list-inline {
+.list--inline,
+%list--inline {
   li {
     display: inline-block;
   }
