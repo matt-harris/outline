@@ -46,10 +46,12 @@
 .btn--tertiary,
 %btn--tertiary {
   background-color: $color-tertiary;
+  color: $color-grey-dark;
 
   &:hover,
   &:focus {
     background-color: tint($color-tertiary, 30%);
+    color: $color-grey-dark;
   }
 }
 
@@ -93,6 +95,18 @@
 .btn--pill,
 %btn--pill {
   border-radius: 3rem;
+}
+
+.btn--ghost,
+%btn--ghost {
+  border: .125rem solid $color-primary;
+  color: $color-primary;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border: .125rem solid tint($color-primary, 30%);
+  }
 }
 
 .btn--block,
