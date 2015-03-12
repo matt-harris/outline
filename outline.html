@@ -24,6 +24,17 @@
       </div>
       <h1>Hello! This is Outline.</h1>
 
+      <!-- typography -->
+      <p>This is a paragraph. this is a paragraph this is a paragraph this is a paragraph. This is a paragraph this is a paragraph this is a paragraph this is a paragraph.</p>
+
+      <!-- headings -->
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+
       <!-- font icons -->
       <i class="rocket"></i>
 
@@ -256,25 +267,64 @@
       <!-- buttons -->
       <h2>Buttons</h2>
 
-      <button class="btn">Button</button>
+      <!-- default -->
+      <div>
+        <button class="btn">Button</button>
+        <button class="btn btn--secondary" href="#">Button</button>
+        <button class="btn btn--tertiary">Button</button>
+        <button class="btn btn--grey">Button</button>
+      </div>
 
-      <button class="btn btn-secondary" href="#">Button</button>
+      <!-- small -->
+      <div>
+        <button class="btn btn--small">Button</button>
+        <button class="btn btn--secondary btn--small">Button</button>
+        <button class="btn btn--tertiary btn--small">Button</button>
+        <button class="btn btn--grey btn--small">Button</button>
+      </div>
 
-      <button class="btn btn-tertiary">Button</button>
+      <!-- large -->
+      <div>
+        <button class="btn btn--primary btn--large">Button</button>
+        <button class="btn btn--secondary btn--large">Button</button>
+        <button class="btn btn--tertiary btn--large">Button</button>
+        <button class="btn btn--grey btn--large">Button</button>
+      </div>
 
-      <button class="btn btn-grey">Button</button>
+      <!-- x-large -->
+      <div>
+        <button class="btn btn--primary btn--xlarge">Button</button>
+        <button class="btn btn--secondary btn--xlarge">Button</button>
+        <button class="btn btn--tertiary btn--xlarge">Button</button>
+        <button class="btn btn--grey btn--xlarge">Button</button>
+      </div>
 
-      <button class="btn btn-block">Button</button>
+      <!-- rounded -->
+      <div>
+        <button class="btn btn--primary btn--rounded">Button</button>
+        <button class="btn btn--secondary btn--rounded">Button</button>
+        <button class="btn btn--tertiary btn--rounded">Button</button>
+        <button class="btn btn--grey btn--rounded">Button</button>
+      </div>
 
-      <button class="btn btn-small">Button</button>
+      <!-- pill -->
+      <div>
+        <button class="btn btn--primary btn--pill">Button</button>
+        <button class="btn btn--secondary btn--pill">Button</button>
+        <button class="btn btn--tertiary btn--pill">Button</button>
+        <button class="btn btn--grey btn--pill">Button</button>
+      </div>
 
-      <button class="btn btn-large btn-rounded">Button</button>
+      <!-- ghost -->
+      <div>
+        <button class="btn btn--ghost is-uppercase">Button</button>
+      </div>
 
-      <button class="btn btn-xlarge btn-secondary btn-rounded" href="#">Button</button>
+      <!-- block -->
+      <button class="btn btn--block">Button</button>
 
-      <button class="btn btn-xlarge btn-tertiary btn-pill">Button</button>
-
-      <button class="btn btn-disabled">Button</button>
+      <!-- disabled -->
+      <button class="btn btn--disabled">Button</button>
 
       <!-- forms -->
 
@@ -282,9 +332,9 @@
 
       <form>
         <fieldset>
-          <legend>legend</legend>
-            <label for="text-input">label</label>
-            <input type="text" id="text-input">
+          <legend>Legend</legend>
+            <label for="text-input">label:</label>
+            <input type="text" id="text-input" placeholder="Placeholder text">
         </fieldset>
 
         <label>
@@ -319,7 +369,25 @@
           <option>Select option 3</option>
         </select>
 
-        <textarea></textarea>
+        <textarea placeholder="Placeholder text"></textarea>
+
+        <label for="email-input">Email:</label>
+        <input type="email" id="email-input" placeholder="Placeholder text">
+
+        <label for="number-input">Number:</label>
+        <input type="number" id="number-input" placeholder="Placeholder text">
+
+        <label for="password-input">Password:</label>
+        <input type="password" id="password-input" placeholder="Placeholder text">
+
+        <label for="search-input">Search:</label>
+        <input type="search" id="search-input" placeholder="Placeholder text">
+
+        <label for="tel-input">Tel:</label>
+        <input type="tel" id="tel-input" placeholder="Placeholder text">
+
+        <label for="url-input">Url:</label>
+        <input type="url" id="url-input" placeholder="Placeholder text">
 
         <label for="disabled-input">disabled</label>
         <input type="text" id="disabled-input" disabled>
@@ -327,14 +395,27 @@
         <input type="submit" value="Submit">
       </form>
 
+      <!-- hide label with helper class -->
+      <form>
+        <label class="visuallyhidden" for="text-input">Name</label>
+        <input type="text" id="text-input" placeholder="Your name">
+
+        <label class="visuallyhidden" for="email-input">Email</label>
+        <input type="email" id="email-input" placeholder="Your email address">
+
+        <textarea placeholder="Your question"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+
       <form class="form-inline">
         <div class="form-row">
           <label for="inline-input">name</label>
-          <input type="text" id="inline-input">
+          <input type="text" id="inline-input" placeholder="Placeholder text">
         </div>
         <div class="form-row">
           <label for="inline-input2">email</label>
-          <input type="text" id="inline-input2">
+          <input type="text" id="inline-input2" placeholder="Placeholder text">
         </div>
         <input type="submit" value="Submit">
       </form>

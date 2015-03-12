@@ -59,6 +59,13 @@
   margin: 0 auto $spacing 0;
 }
 
+
+// make text uppercase
+.is-uppercase,
+%is-uppercase {
+  text-transform: uppercase;
+}
+
 // hide from browsers & screenreaders
 .hide,
 %hide {

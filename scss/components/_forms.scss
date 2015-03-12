@@ -12,6 +12,7 @@ label {
   display: block;
   margin-bottom: .5rem;
   cursor: pointer;
+  font-family: $font-secondary;
 }
 
 fieldset {
@@ -25,25 +26,27 @@ legend {
   margin: 0;
   margin-left: -.5rem;
   padding: 0 .5rem;
+  font-family: $font-secondary;
 }
 
-input,
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
 textarea,
 select {
   display: block;
   width: 100%;
   margin-bottom: $spacing;
+  height: 2.375rem;
   padding: .375rem;
   font: inherit;
   line-height: 1.5;
   color: $color-grey-dark;
   border: .0625rem solid $color-grey;
-}
-
-textarea {
-  overflow: auto;
-  resize: vertical;
-  height: 5.5rem; // roughly 3 lines in height
 }
 
 // inputs 'inline-block' by default
@@ -53,9 +56,18 @@ input[type="radio"] {
   display: inline-block;
   width: auto;
   margin-bottom: 0;
-  padding: .375rem;
   cursor: pointer;
   vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  height: 5.5rem; // roughly 3 lines in height
+}
+
+select {
+  font-family: $font-secondary;
 }
 
 // extend '.btn'
@@ -100,4 +112,17 @@ textarea[disabled] {
     display: inline-block;
     margin: 0 1rem 0 0;
   }
+}
+
+// Placeholder text colour
+::-webkit-input-placeholder {
+  color: $placeholder-text;
+}
+
+::-moz-placeholder {
+  color: $placeholder-text;
+}
+
+:-ms-input-placeholder {
+  color: $placeholder-text;
 }
