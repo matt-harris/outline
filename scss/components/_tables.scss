@@ -24,30 +24,26 @@ table {
   }
 }
 
-.table-stripes {
+.table--stripes {
   tbody > tr:nth-child(odd) > td {
     background-color: tint($color-grey-light, 50%);
   }
 }
 
-.table-border {
-  border: .0625rem solid $color-grey;
-}
-
-.table-border-rows {
+.table--border-rows {
   tr {
-    border-bottom: .0625rem solid $color-grey;
+    border-bottom: .0625rem solid $color-grey-light;
   }
 }
 
-.table-border-cells {
+.table--border-cells {
   th,
   td {
-    border: .0625rem solid $color-grey;
+    border: .0625rem solid $color-grey-light;
   }
 }
 
-.table-condensed {
+.table--condensed {
   th,
   td {
     padding: .25rem;
@@ -55,7 +51,7 @@ table {
 }
 
 // responsive table container
-.table-responsive {
+.table--responsive {
   overflow: auto;
   width: 100%;
 }
