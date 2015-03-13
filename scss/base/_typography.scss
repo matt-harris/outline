@@ -174,17 +174,17 @@ blockquote {
   margin-bottom: $spacing;
   padding-left: $spacing;
   padding-right: $spacing;
-  border-left: .25rem solid $color-primary;
   font-style: italic;
+  border-left: .25rem solid $color-primary;
 }
 
 // highlighting colors
 ::selection {
-  background: $color-primary;
   color: $color-white;
+  background: $color-primary;
 }
 
 ::-moz-selection {
-  background: $color-primary;
   color: $color-white;
+  background: $color-primary;
 }

@@ -5,26 +5,26 @@
 
 .btn,
 %btn {
-  display: inline-block;
-  padding: .375rem 1rem;
   margin-bottom: 1rem;
+  padding: .375rem 1rem;
+  display: inline-block;
   font-family: $font-secondary;
   font-size: inherit;
   font-weight: normal;
   text-align: center;
-  vertical-align: middle;
   color: $color-white;
   background-color: $color-primary;
   border: none;
   outline: none;
   cursor: pointer;
+  vertical-align: middle;
   transition: all .3s ease-in-out;
 
   &:hover,
   &:focus {
     color: $color-white;
-    background-color: tint($color-primary, 30%);
     text-decoration: none;
+    background-color: tint($color-primary, 30%);
   }
 
   &.btn--disabled, &[disabled] {
@@ -45,25 +45,25 @@
 
 .btn--tertiary,
 %btn--tertiary {
-  background-color: $color-tertiary;
   color: $color-grey-dark;
+  background-color: $color-tertiary;
 
   &:hover,
   &:focus {
-    background-color: tint($color-tertiary, 30%);
     color: $color-grey-dark;
+    background-color: tint($color-tertiary, 30%);
   }
 }
 
 .btn--grey,
 %btn--grey {
+  color: $color-grey-dark;
   background-color: $color-grey-light;
-  color: $color-grey;
 
   &:hover,
   &:focus {
-    background-color: tint($color-grey-light, 30%);
     color: $color-grey-dark;
+    background-color: tint($color-grey-light, 30%);
   }
 }
 
@@ -99,8 +99,8 @@
 
 .btn--ghost,
 %btn--ghost {
-  border: .125rem solid $color-primary;
   color: $color-primary;
+  border: .125rem solid $color-primary;
   background-color: transparent;
 
   &:hover,
@@ -114,10 +114,10 @@
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
-  display: block;
-  width: 100%;
   margin-right: 0;
   margin-left: 0;
   padding-right: 0;
   padding-left: 0;
+  display: block;
+  width: 100%;
 }

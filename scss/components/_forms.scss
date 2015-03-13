@@ -9,10 +9,10 @@ fieldset {
 }
 
 label {
-  display: block;
   margin-bottom: .5rem;
-  cursor: pointer;
+  display: block;
   font-family: $font-secondary;
+  cursor: pointer;
 }
 
 fieldset {
@@ -22,10 +22,10 @@ fieldset {
 }
 
 legend {
-  display: block;
   margin: 0;
   margin-left: -.5rem;
   padding: 0 .5rem;
+  display: block;
   font-family: $font-secondary;
 }
 
@@ -38,11 +38,11 @@ input[type="text"],
 input[type="url"],
 textarea,
 select {
+  margin-bottom: $spacing;
+  padding: .375rem;
   display: block;
   width: 100%;
-  margin-bottom: $spacing;
   height: 2.375rem;
-  padding: .375rem;
   font: inherit;
   line-height: 1.5;
   color: $color-grey-dark;
@@ -53,17 +53,17 @@ select {
 input[type="checkbox"],
 input[type="image"],
 input[type="radio"] {
+  margin-bottom: 0;
   display: inline-block;
   width: auto;
-  margin-bottom: 0;
   cursor: pointer;
   vertical-align: baseline;
 }
 
 textarea {
+  height: 5.5rem; // roughly 3 lines in height
   overflow: auto;
   resize: vertical;
-  height: 5.5rem; // roughly 3 lines in height
 }
 
 select {
