@@ -16,6 +16,7 @@
     "browser-sync": "^2.2.3",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
+    "gulp-cache": "^0.2.8",
     "gulp-changed": "^1.2.1",
     "gulp-concat": "^2.5.2",
     "gulp-imagemin": "^2.2.1",

@@ -15,10 +15,11 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 var sourcemaps = require('gulp-sourcemaps');
-var changed = require('gulp-changed');
+var cache = require('gulp-cache');
 var notify = require('gulp-notify');
 
-
+// Default Task
+gulp.task('default', ['css', 'js', 'images', 'browser-sync', 'watch']);
 
 // Tasks
 // Compile sass
@@ -69,13 +70,12 @@ gulp.task('js', function() {
 
 // Compress images
 gulp.task('images', function() {
-  gulp.src('img/*.{png,jpg,gif}')
-  .pipe(changed('img/min'))
-  .pipe(images({
+  gulp.src('img/*.{gif,jpg,png}')
+  .pipe(cache(images({
     optimizationLevel: 4,
     progressive: true,
     interlaced: true
-  }))
+  })))
   .pipe(gulp.dest('img/min/'))
 
   // notify to say the task has complete
@@ -103,8 +103,6 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
   gulp.watch('scss/**/*.scss', ['css']);
   gulp.watch('js/*.js', ['js']);
+  gulp.watch('img/*' , ['images']);
   gulp.watch(['*.html'], ['reload']);
 });
-
-// Default Task
-gulp.task('default', ['css', 'js', 'images', 'browser-sync', 'watch']);
