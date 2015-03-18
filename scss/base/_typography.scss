@@ -1,7 +1,8 @@
 //---------------------------------------------//
 // Typography - Outline
 // Set headings, font, link , hr, sub & sup,
-// abbreviation, highlighting & blockquote styles
+// abbreviation, highlighting, figure
+// & blockquote styles
 //---------------------------------------------//
 
 html {
@@ -86,7 +87,8 @@ p {
 }
 
 small,
-.text-small {
+.text-small,
+%text-small {
   font-size: .9375rem;
 }
 
@@ -176,6 +178,19 @@ blockquote {
   padding-right: $spacing;
   font-style: italic;
   border-left: .25rem solid $color-primary;
+}
+
+// figure and caption
+figure {
+  margin-bottom: $spacing;
+}
+
+figcaption {
+  padding: .5rem 0;
+  font-family: $font-secondary;
+  font-size: .875rem;
+  text-align: center;
+  border-bottom: .0625rem solid $color-grey-light;
 }
 
 // highlighting colors

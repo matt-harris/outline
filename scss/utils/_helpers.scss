@@ -46,10 +46,21 @@
   float: left;
 }
 
+// spacing
 .no-space,
 %no-space {
   margin: 0;
   padding: 0;
+}
+
+.space-top,
+%space-top {
+  margin-top: $spacing;
+}
+
+.space-btm,
+%space-btm {
+  margin-bottom: $spacing;
 }
 
 // center image
