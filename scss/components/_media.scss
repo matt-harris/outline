@@ -19,19 +19,19 @@
   @extend %clearfix;
 }
 
-.media__img {
+.media__item {
   float: left;
   margin: 0 $spacing $spacing 0;
 }
 
 // Reversed image - right instead of left
-.media__img--reversed {
+.media__item--reversed {
   float: right;
   margin-left: $spacing;
 }
 
-.media__img img,
-.media__img--reversed img {
+.media__item img,
+.media__item--reversed img {
   display: block;
 }
 
