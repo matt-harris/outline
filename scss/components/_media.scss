@@ -2,6 +2,8 @@
 // Media - Outline
 // Basic styling for media object
 //
+// Media Object
+// ------------
 // Place any image and text-like content side-by-side:
 // http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
 //
@@ -11,8 +13,13 @@
 //    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 //  </div>
 //
+// Flag Object
+// ------------
+// Place any image and text-like content side-by-side with vertical alignment:
+// http://csswizardry.com/2013/05/the-flag-object/
 //---------------------------------------------//
 
+// media object
 .media {
   display: block;
   margin-bottom: $spacing;
@@ -41,4 +48,42 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+// flag object
+.flag {
+  display: table;
+  width: 100%;
+}
+
+.flag__item,
+.flag__body {
+  display: table-cell;
+  vertical-align: middle;
+
+  .flag--top & {
+    vertical-align: top;
+  }
+
+  .flag--bottom & {
+    vertical-align: bottom;
+  }
+}
+
+.flag__item {
+  padding-right: $spacing;
+
+  > img {
+    display: block;
+    max-width: none;
+  }
+
+  .flag--reversed & {
+    padding-right: 0;
+    padding-left: $spacing;
+  }
+}
+
+.flag__body {
+  width: 100%;
 }
