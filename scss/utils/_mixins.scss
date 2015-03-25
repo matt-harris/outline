@@ -23,18 +23,3 @@
     padding-right: $padding;
   }
 }
-
-//---------------------------------------------//
-// Functions -- Outline
-// e.g. color: tint($color-grey-dark, 30%);
-//---------------------------------------------//
-
-// Slightly lighten a colour
-@function tint($color, $percent){
-  @return mix(white, $color, $percent);
-}
-
-// Slightly darken a colour
-@function shade($color, $percent){
-  @return mix(black, $color, $percent);
-}
