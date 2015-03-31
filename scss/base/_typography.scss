@@ -16,14 +16,9 @@ body {
   color: $color-grey-dark;
 }
 
-// font sizes calculated by modular scale - http://modularscale.com/
-// pixel value is rounded up to nearest whole number
-
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 %h1, %h2, %h3, %h4, %h5, %h6 {
-  margin-bottom: $spacing;
-  padding-top: .75rem;
   font-family: $font-secondary;
   font-weight: normal;
 }
@@ -33,14 +28,17 @@ h1,
 %h1 {
   font-size: 1.875rem;
   font-weight: 700;
+  margin: .9375rem 0 .75rem 0;
 
   @include respond-min($tabletWide) {
     font-size: 2.5rem;
+    margin: 1.25rem 0 1rem 0;
   }
 
   @include respond-min($desktop) {
     font-size: 3.375rem;
     line-height: 1.3;
+    margin: 1.625rem 0 1.375rem 0;
   }
 }
 
@@ -48,9 +46,11 @@ h2,
 .h2,
 %h2 {
   font-size: 1.688rem;
+  margin: .8125rem 0 .6875rem 0;
 
   @include respond-min($tabletWide) {
     font-size: 1.875rem;
+    margin: .9375rem 0 .75rem 0;
   }
 }
 
@@ -58,18 +58,28 @@ h3,
 .h3,
 %h3 {
   font-size: 1.688rem;
-}
-
-h4, h5, h6,
-.h4, .h5, .h6,
-%h4, %h5, %h6 {
-  font-size: 1rem;
+  margin: .8125rem 0 .6875rem 0;
 }
 
 h4,
 .h4,
 %h4 {
-  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: .75rem 0 .625rem 0;
+}
+
+h5,
+.h5,
+%h5 {
+  font-size: 1.375rem;
+  margin: .6875rem 0 .5625rem 0;
+}
+
+h6,
+.h6,
+%h6 {
+  font-size: 1.25rem;
+  margin: .625rem 0 .5rem 0;
 }
 
 p {
@@ -174,10 +184,15 @@ mark {
 // blockquote
 blockquote {
   margin-bottom: $spacing;
-  padding-left: $spacing;
+  padding-left: 1rem;
   padding-right: $spacing;
-  font-style: italic;
   border-left: .25rem solid $color-primary;
+  font-family: $font-secondary;
+
+  cite {
+    font-style: italic;
+    @extend %text-small;
+  }
 }
 
 // figure and caption
