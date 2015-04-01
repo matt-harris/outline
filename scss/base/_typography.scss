@@ -189,6 +189,10 @@ blockquote {
   border-left: .25rem solid $color-primary;
   font-family: $font-secondary;
 
+  p:last-of-type {
+    margin-bottom: .25rem;
+  }
+
   cite {
     font-style: italic;
     @extend %text-small;
