@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 
 // Include plugins
+// npm install --save-dev gulp-sass gulp-autoprefixer gulp-minify-css gulp-concat gulp-uglify gulp-imagemin browser-sync gulp-sourcemaps gulp-cache gulp-notify
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
