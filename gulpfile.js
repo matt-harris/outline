@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 
 // Include plugins
-// npm install --save-dev gulp-sass gulp-autoprefixer gulp-minify-css gulp-concat gulp-uglify gulp-imagemin browser-sync gulp-sourcemaps gulp-cache gulp-notify
+// npm install --save-dev gulp-sass gulp-autoprefixer gulp-minify-css gulp-concat gulp-uglify gulp-imagemin browser-sync gulp-cache gulp-notify gulp-size
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
@@ -15,9 +15,9 @@ var images = require('gulp-imagemin');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
-var sourcemaps = require('gulp-sourcemaps');
 var cache = require('gulp-cache');
 var notify = require('gulp-notify');
+var size = require('gulp-size');
 
 // Default Task
 gulp.task('default', ['css', 'js', 'images', 'browser-sync', 'watch']);
@@ -26,7 +26,6 @@ gulp.task('default', ['css', 'js', 'images', 'browser-sync', 'watch']);
 // Compile sass
 gulp.task('css', function() {
   gulp.src('scss/**/*.scss')
-  .pipe(sourcemaps.init())
   .pipe(sass({
     errLogToConsole: true
   }))
@@ -37,10 +36,13 @@ gulp.task('css', function() {
   // minify the file
   .pipe(minifycss())
 
-  .pipe(sourcemaps.write())
-
   // move css file to folder
   .pipe(gulp.dest('css/'))
+
+  // get file size (gzipped)
+  .pipe(size({
+    gzip: true
+  }))
 
   // notify to say the task has complete
   .pipe(notify({
@@ -51,14 +53,11 @@ gulp.task('css', function() {
 // Concatenate js files and minify
 gulp.task('js', function() {
   gulp.src('js/*.js')
-  .pipe(sourcemaps.init())
 
   .pipe(concat('bundle.js'))
 
   // minify the file
   .pipe(uglify())
-
-  .pipe(sourcemaps.write())
 
   // move js file to folder
   .pipe(gulp.dest('js/min/'))
