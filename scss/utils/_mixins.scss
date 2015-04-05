@@ -11,6 +11,24 @@
   }
 }
 
+@mixin ghost-btn($color) {
+  color: $color;
+  border: .125rem solid $color;
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color;
+  }
+}
+
+@mixin gradient($angle, $colour1, $colour2) {
+  background: $colour1;
+  background: linear-gradient(#{$angle}deg, $colour1 0%, $colour2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colour1', endColorstr='$colour2',GradientType=1 );
+}
+
 @mixin icon($icon) {
   @extend %icon;
   @extend %icon-#{$icon};
