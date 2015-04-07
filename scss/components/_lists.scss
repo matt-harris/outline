@@ -61,7 +61,10 @@ dt {
 
 .list--inline,
 %list--inline {
+  margin-left: 0;
+
   li {
     display: inline-block;
+    margin-right: .5rem;
   }
 }
