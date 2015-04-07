@@ -9,7 +9,7 @@ fieldset {
 }
 
 label {
-  margin-bottom: .5rem;
+  margin-bottom: .25rem;
   display: block;
   font-family: $font-secondary;
   cursor: pointer;
@@ -29,6 +29,13 @@ legend {
   font-family: $font-secondary;
 }
 
+.form__row,
+%form__row {
+  margin-bottom: $spacing;
+  @extend %clearfix;
+}
+
+input[type="date"],
 input[type="email"],
 input[type="number"],
 input[type="password"],
@@ -38,7 +45,6 @@ input[type="text"],
 input[type="url"],
 textarea,
 select {
-  margin-bottom: $spacing;
   padding: .375rem;
   display: block;
   width: 100%;
@@ -74,6 +80,7 @@ select {
 input[type="submit"] {
   @extend %btn;
   width: auto;
+  margin-bottom: 0;
 }
 
 input:focus,
@@ -95,12 +102,7 @@ textarea[disabled] {
 }
 
 // inline form styles
-.form-inline {
-
-  .form-row {
-    @extend %clearfix;
-  }
-
+.form--inline {
   input,
   textarea,
   select {
@@ -111,6 +113,23 @@ textarea[disabled] {
   label {
     display: inline-block;
     margin: 0 1rem 0 0;
+    width: 6.5rem;
+    text-align: right;
+  }
+
+  .form__row--controls,
+  %form__row--controls {
+    @extend %form__row;
+    margin-left: 7.5rem;
+
+    label {
+      width: auto;
+    }
+  }
+
+  .form__row--actions {
+    @extend %form__row--controls;
+    margin-bottom: 0;
   }
 }
 
