@@ -34,6 +34,11 @@
 }
 
 // floats
+.float-left,
+%float-left {
+  float: left;
+}
+
 .float-center,
 %float-center {
   float: none;
@@ -44,11 +49,6 @@
 .float-right,
 %float-right {
   float: right;
-}
-
-.float-left,
-%float-left {
-  float: left;
 }
 
 // spacing
