@@ -13,6 +13,11 @@
 }
 
 // align
+.align-left,
+%align-left {
+  text-align: left;
+}
+
 .align-center,
 %align-center {
   text-align: center;
@@ -21,11 +26,6 @@
 .align-right,
 %align-right {
   text-align: right;
-}
-
-.align-left,
-%align-left {
-  text-align: left;
 }
 
 .justify,
