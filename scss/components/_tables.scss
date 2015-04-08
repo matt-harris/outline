@@ -25,6 +25,12 @@ table {
   }
 }
 
+.table {
+  thead > tr {
+    border-bottom: .0625rem solid $color-grey-light;
+  }
+}
+
 .table--stripes {
   tbody > tr:nth-child(odd) > td {
     background-color: tint($color-grey-light, 50%);
@@ -45,6 +51,10 @@ table {
 }
 
 .table--condensed {
+  thead > tr {
+    border-bottom: .0625rem solid $color-grey-light;
+  }
+
   th,
   td {
     padding: .25rem;
