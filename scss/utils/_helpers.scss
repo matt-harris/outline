@@ -63,6 +63,21 @@
   margin-top: $spacing;
 }
 
+.space-right,
+%space-right {
+  margin-right: $spacing;
+}
+
+.space-btm,
+%space-btm {
+  margin-bottom: $spacing;
+}
+
+.space-left,
+%space-left {
+  margin-left: $spacing;
+}
+
 .space-btm,
 %space-btm {
   margin-bottom: $spacing;
