@@ -78,6 +78,63 @@
   margin-left: $spacing;
 }
 
+// background colours
+.bg-primary,
+%bg-primary {
+  background-color: $color-primary;
+}
+
+.bg-secondary,
+%bg-secondary {
+  background-color: $color-secondary;
+}
+
+.bg-tertiary,
+%bg-tertiary {
+  background-color: $color-tertiary;
+}
+
+.bg-grey,
+%bg-grey {
+  background-color: $color-grey;
+}
+
+.bg-grey-light,
+%bg-grey-light {
+  background-color: $color-grey-light;
+}
+
+.bg-grey-dark,
+%bg-grey-dark {
+  background-color: $color-grey-dark;
+}
+
+// text colours
+.text-primary,
+%text-primary {
+  color: $color-primary;
+}
+
+.text-secondary,
+%text-secondary {
+  color: $color-secondary;
+}
+
+.text-tertiary,
+%text-tertiary {
+  color: $color-tertiary;
+}
+
+.text-grey,
+%text-grey {
+  color: $color-grey;
+}
+
+.text-grey-light,
+%text-grey-light {
+  color: $color-grey-light;
+}
+
 // center image
 .img-center,
 %img-center {
