@@ -96,6 +96,11 @@ p {
   font-family: $font-secondary;
 }
 
+.lead,
+%lead {
+  font-size: 1.125rem;
+}
+
 small,
 .text-small,
 %text-small {
