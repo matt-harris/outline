@@ -58,6 +58,11 @@
   padding: 0;
 }
 
+.space,
+%space {
+  margin: $spacing;
+}
+
 .space-top,
 %space-top {
   margin-top: $spacing;
