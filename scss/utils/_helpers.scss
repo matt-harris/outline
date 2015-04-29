@@ -109,6 +109,11 @@
   background-color: $color-grey-dark;
 }
 
+.bg-white
+%bg-white {
+  background-color: $color-white;
+}
+
 // text colours
 .text-primary,
 %text-primary {
@@ -133,6 +138,11 @@
 .text-grey-light,
 %text-grey-light {
   color: $color-grey-light;
+}
+
+.text-white
+%text-white {
+  color: $color-white;
 }
 
 // center image
