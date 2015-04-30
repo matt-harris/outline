@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 
 // Include plugins
-// npm install --save-dev gulp-sass gulp-autoprefixer gulp-minify-css gulp-concat gulp-uglify gulp-imagemin browser-sync gulp-cache gulp-notify gulp-size
+// npm install --save-dev gulp-sass gulp-autoprefixer gulp-minify-css gulp-concat gulp-uglify gulp-imagemin browser-sync gulp-cache gulp-notify gulp-size gulp-rename
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
@@ -18,6 +18,7 @@ var reload = browserSync.reload;
 var cache = require('gulp-cache');
 var notify = require('gulp-notify');
 var size = require('gulp-size');
+var rename = require('gulp-rename');
 
 // Default Task
 gulp.task('default', ['css', 'js', 'images', 'browser-sync', 'watch']);
@@ -33,10 +34,18 @@ gulp.task('css', function() {
   // auto prefix css
   .pipe(prefix('last 2 versions'))
 
+  // move css file to folder
+  .pipe(gulp.dest('css/'))
+
+  // rename the file with .min
+  .pipe(rename({
+    suffix: '.min'
+  }))
+
   // minify the file
   .pipe(minifycss())
 
-  // move css file to folder
+  // move minified css file to folder
   .pipe(gulp.dest('css/'))
 
   // get file size (gzipped)
