@@ -1,22 +1,6 @@
 //---------------------------------------------//
 // Media - Outline
-// Basic styling for media object
-//
-// Media Object
-// ------------
-// Place any image and text-like content side-by-side:
-// http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
-//
-//  <div class="media">
-//    <img class="media__img" src="/img/path-to-image.jpg" alt="Image alt text">
-//    <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-//    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-//  </div>
-//
-// Flag Object
-// ------------
-// Place any image and text-like content side-by-side with vertical alignment:
-// http://csswizardry.com/2013/05/the-flag-object/
+// Basic styling for media & flag object
 //---------------------------------------------//
 
 // media object
@@ -31,7 +15,7 @@
   margin: 0 $spacing $spacing 0;
 }
 
-// Reversed image - right instead of left
+// Reversed item - right instead of left
 .media__item--reversed {
   float: right;
   margin-left: $spacing;
@@ -54,6 +38,7 @@
 .flag {
   display: table;
   width: 100%;
+  margin-bottom: $spacing;
 }
 
 .flag__item,
@@ -86,4 +71,8 @@
 
 .flag__body {
   width: 100%;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
