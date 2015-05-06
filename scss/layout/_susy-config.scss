@@ -3,12 +3,12 @@
 //---------------------------------------------//
 
 $susy: (
-  columns: 16,
-  debug: (image:show),
-  gutters : .25,
+  columns: 12,
+  gutters: .25,
+  gutter-position: split,
+  container: $widescreen,
 );
 
 .container {
-  @include container(71.25rem);
-  height: 100vh;
+  @include container();
 }
