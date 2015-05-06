@@ -5,23 +5,6 @@
   font-weight: normal;
   font-style: normal; }
 
-.rocket, .play:before {
-  display: inline-block;
-  font: normal normal normal 16px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0); }
-
-.play:before {
-  content: "\f0ad"; }
-
-.rocket:before {
-  content: "\f135"; }
-
 .clearfix:after, .form__row:after, .form--inline .form__row--controls:after, .form--inline .form__row--actions:after, .media:after {
   content: "";
   display: table;
@@ -255,7 +238,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   cursor: pointer; }
 
 input[type="search"] {
-  -webkit-appearance: textfield;
   box-sizing: border-box; }
 
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
@@ -423,14 +405,7 @@ figcaption {
 .container {
   max-width: 71.25rem;
   margin-left: auto;
-  margin-right: auto;
-  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, transparent 80%);
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, transparent 80%);
-  background-size: 6.32911%;
-  background-origin: content-box;
-  background-clip: content-box;
-  background-position: left top;
-  height: 100vh; }
+  margin-right: auto; }
   .container:after {
     content: " ";
     display: block;
@@ -707,7 +682,8 @@ dt {
 
 .flag {
   display: table;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1.5rem; }
 
 .flag__item, .flag__body {
   display: table-cell;
@@ -728,6 +704,8 @@ dt {
 
 .flag__body {
   width: 100%; }
+  .flag__body p:last-of-type {
+    margin-bottom: 0; }
 
 .pager {
   margin-bottom: 1.5rem;
@@ -783,24 +761,3 @@ table {
 .table--responsive {
   overflow: auto;
   width: 100%; }
-
-.play:before {
-  padding-right: 0.5rem; }
-
-.content {
-  height: 400px;
-  background-color: red; }
-  @media screen and (min-width: 48rem) {
-    .content {
-      width: 73.68421%;
-      float: left;
-      margin-right: 5.26316%; } }
-
-.sidebar {
-  height: 400px;
-  background-color: blue; }
-  @media screen and (min-width: 48rem) {
-    .sidebar {
-      width: 21.05263%;
-      float: right;
-      margin-right: 0; } }

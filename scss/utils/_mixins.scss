@@ -3,14 +3,17 @@
 // e.g. @include respond-min($tablet) {
 //        background-color: $color-primary;
 //      }
+// Docs - http://outlinecss.co.uk/get-started.html#mixins
 //---------------------------------------------//
 
+// media queries / breakpoints
 @mixin respond-min($width) {
   @media screen and (min-width: $width) {
     @content;
   }
 }
 
+// ghost buttons
 @mixin ghost-btn($color) {
   color: $color;
   border: .125rem solid $color;
@@ -23,6 +26,7 @@
   }
 }
 
+// gradients
 @mixin gradient($angle, $colour1, $colour2) {
   background: $colour1;
   background: linear-gradient(#{$angle}deg, $colour1 0%, $colour2 100%);
