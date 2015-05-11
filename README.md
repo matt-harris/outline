@@ -21,7 +21,7 @@ View full documentation at: [http://outlinecss.co.uk/get-started.html](http://ou
 
 ## Updates
 
-Keep track development updates by following [@outline_css](https://twitter.com/outline_css) on Twitter.
+Keep track of updates by following [@outline_css](https://twitter.com/outline_css) on Twitter.
 
 ## License
 
