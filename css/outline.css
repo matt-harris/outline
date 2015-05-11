@@ -93,7 +93,7 @@
 
 .img-center {
   display: block;
-  margin: 0 auto 1.5rem 0; }
+  margin: 0 auto 1.5rem auto; }
 
 .is-uppercase {
   text-transform: uppercase; }
