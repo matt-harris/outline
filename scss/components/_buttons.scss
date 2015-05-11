@@ -15,7 +15,7 @@ button,
   font-weight: normal;
   text-align: center;
   line-height: 1;
-  color: $color-white;
+  color: white;
   background-color: $color-primary;
   border: none;
   outline: none;
@@ -26,7 +26,7 @@ button,
   &:hover,
   &:focus,
   &:active {
-    color: $color-white;
+    color: white;
     text-decoration: none;
     background-color: shade($color-primary, 15%);
   }
