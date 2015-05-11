@@ -759,5 +759,8 @@ table {
   padding: .25rem; }
 
 .table--responsive {
-  overflow: auto;
-  width: 100%; }
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 1.5rem; }
+  .table--responsive table {
+    margin-bottom: .5rem; }

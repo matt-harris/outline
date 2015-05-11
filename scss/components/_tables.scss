@@ -64,6 +64,11 @@ table {
 
 // responsive table container
 .table--responsive {
-  overflow: auto;
+  overflow-x: auto;
   width: 100%;
+  margin-bottom: $spacing;
+
+  table {
+    margin-bottom: .5rem;
+  }
 }
