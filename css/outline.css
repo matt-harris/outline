@@ -761,6 +761,7 @@ table {
 .table--responsive {
   overflow-x: auto;
   width: 100%;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  -webkit-overflow-scrolling: touch; }
   .table--responsive table {
     margin-bottom: .5rem; }
