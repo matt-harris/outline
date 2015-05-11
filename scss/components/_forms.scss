@@ -17,7 +17,8 @@ label {
 }
 
 fieldset {
-  margin: $spacing 0;
+  margin-top: $spacing;
+  margin-bottom: $spacing;
   padding: $spacing;
   border: .0625rem solid $color-grey;
 }
