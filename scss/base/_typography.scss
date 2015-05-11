@@ -153,7 +153,7 @@ hr {
   margin: $spacing auto;
   border: 0;
   border-top: .0625rem solid $color-grey;
-  border-bottom: 0 solid $color-white;
+  border-bottom: 0 solid #fff;
 }
 
 // subscript & superscript
@@ -220,11 +220,11 @@ figcaption {
 
 // highlighting colors
 ::selection {
-  color: $color-white;
+  color: #fff;
   background: $color-primary;
 }
 
 ::-moz-selection {
-  color: $color-white;
+  color: #fff;
   background: $color-primary;
 }

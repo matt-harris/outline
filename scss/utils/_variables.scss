@@ -18,13 +18,16 @@ $font-monospace: Monaco, Consolas, 'Lucida Console', monospace;
 $color-primary: #38a1d6;
 $color-secondary: #16f4d0;
 $color-tertiary: #fcee21;
-$color-white: #fff;
 $color-grey: #a1acb5;
 $color-grey-light: #dce8ef;
 $color-grey-dark: #333;
 
 // Placeholder text colour
 $placeholder-text: $color-grey;
+
+// Button text color
+$btn-text-color: #fff;
+$btn-text-color-alt: $color-grey-dark;
 
 // Breakpoints
 $mobileLandscape: 30rem; // 480px
