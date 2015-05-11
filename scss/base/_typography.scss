@@ -34,7 +34,7 @@ h1,
 
   @include respond-min($tabletWide) {
     font-size: 2.5rem;
-    margin-top: 1.25rem
+    margin-top: 1.25rem;
     margin-bottom: 1rem;
   }
 
@@ -64,7 +64,7 @@ h3,
 .h3,
 %h3 {
   font-size: 1.688rem;
-  margin-top: .8125rem
+  margin-top: .8125rem;
   margin-bottom: .6875rem;
 }
 
@@ -72,7 +72,7 @@ h4,
 .h4,
 %h4 {
   font-size: 1.5rem;
-  margin-top: .75rem
+  margin-top: .75rem;
   margin-bottom: .625rem;
 }
 
@@ -80,7 +80,7 @@ h5,
 .h5,
 %h5 {
   font-size: 1.375rem;
-  margin-top: .6875rem
+  margin-top: .6875rem;
   margin-bottom: .5625rem;
 }
 
@@ -88,7 +88,7 @@ h6,
 .h6,
 %h6 {
   font-size: 1.25rem;
-  margin-top: .625rem
+  margin-top: .625rem;
   margin-bottom: .5rem;
 }
 
