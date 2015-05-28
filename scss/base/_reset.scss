@@ -5,10 +5,6 @@
 //---------------------------------------------//
 
 // viewport resizing
-@-webkit-viewport   { width: device-width; zoom: 1.0; }
-@-moz-viewport      { width: device-width; zoom: 1.0; }
-@-ms-viewport       { width: device-width; zoom: 1.0; }
-@-o-viewport        { width: device-width; zoom: 1.0; }
 @viewport           { width: device-width; zoom: 1.0; }
 
 // remove defaults
@@ -43,8 +39,6 @@ footer, header, hgroup, menu, nav, section {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing:    border-box;
   box-sizing:         border-box;
 }
 
@@ -56,8 +50,7 @@ body {
 
 html {
   background: #fff;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 // correct inline-block display not defined in IE 8/9
