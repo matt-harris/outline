@@ -152,14 +152,6 @@
   h2, h3 {
     page-break-after: avoid; } }
 
-@-webkit-viewport {
-  width: device-width;
-  zoom: 1.0; }
-
-@-moz-viewport {
-  width: device-width;
-  zoom: 1.0; }
-
 @-ms-viewport {
   width: device-width;
   zoom: 1.0; }
@@ -191,8 +183,9 @@ html, body {
 
 html {
   background: #fff;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%; }
 
 audio, canvas, video {
   display: inline-block; }
@@ -405,10 +398,6 @@ figcaption {
   background: #38a1d6; }
 
 ::selection {
-  color: #fff;
-  background: #38a1d6; }
-
-::-moz-selection {
   color: #fff;
   background: #38a1d6; }
 

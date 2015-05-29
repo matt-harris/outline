@@ -32,7 +32,7 @@ h1,
   margin-top: .9375rem;
   margin-bottom: .75rem;
 
-  @include respond-min($tabletWide) {
+  @include respond-min($tablet-wide) {
     font-size: 2.5rem;
     margin-top: 1.25rem;
     margin-bottom: 1rem;
@@ -53,7 +53,7 @@ h2,
   margin-top: .8125rem;
   margin-bottom: .6875rem;
 
-  @include respond-min($tabletWide) {
+  @include respond-min($tablet-wide) {
     font-size: 1.875rem;
     margin-top: .9375rem;
     margin-bottom: .75rem;
