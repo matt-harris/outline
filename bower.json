@@ -1,0 +1,31 @@
+{
+  "name": "outline",
+  "version": "1.0.0",
+  "homepage": "http://outlinecss.co.uk/",
+  "description": "The clean & simple framework. Outline is simple CSS starter boilerplate for any new web project. It's a modular, mobile-first framework which includes todays best practices for responsive design and core components (including susy) I use on every project.",
+  "authors": [
+    "Matt Harris <hello@matt-harris.net> (http://www.matt-harris.net/)"
+  ],
+  "main": "scss/outline.scss",
+  "keywords": [
+    "outline",
+    "css",
+    "sass",
+    "framework",
+    "responsive",
+    "susy",
+    "mobile-first",
+    "front-end",
+    "boilerplate",
+    "modular",
+    "simple"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
