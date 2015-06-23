@@ -15,7 +15,7 @@ All notable changes to this project will be documented in this file.
 - Shall vendor prefixes be included? [\#5](https://github.com/matt-harris/outline/issues/5)
 - Normalize names [\#3](https://github.com/matt-harris/outline/issues/3)
 
-### Added
+### Changed
 - refactored unneeded shorthand for margin properties. [\#2](https://github.com/matt-harris/outline/pull/2) ([filose](https://github.com/filose))
 
 ## [v1.0](https://github.com/matt-harris/outline/tree/v1.0) (2015-05-11)
