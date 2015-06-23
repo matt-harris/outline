@@ -8,8 +8,6 @@ All notable changes to this project will be documented in this file.
 - Add to bower [\#8](https://github.com/matt-harris/outline/issues/8)
 - Update to Susy 2.2.5
 
-[Full Changelog](https://github.com/matt-harris/outline/compare/v1.0.1...HEAD)
-
 ## [v1.0.1](https://github.com/matt-harris/outline/tree/v1.0.1) (2015-06-10)
 
 ### Fixed
@@ -24,3 +22,5 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Intial release
+
+[Full Changelog](https://github.com/matt-harris/outline/compare/v1.0.1...HEAD)
