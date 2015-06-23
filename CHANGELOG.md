@@ -4,9 +4,15 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased](https://github.com/matt-harris/outline/tree/HEAD)
 
 ### Added
+
+## [v1.1.0](https://github.com/matt-harris/outline/tree/v1.1.0) (2015-06-23)
+
+### Added
 - Include CHANGELOG.md
 - Add to bower [\#8](https://github.com/matt-harris/outline/issues/8)
-- Update to Susy 2.2.5
+
+### Changed
+- Updated Susy to version 2.2.5
 
 ## [v1.0.1](https://github.com/matt-harris/outline/tree/v1.0.1) (2015-06-10)
 
