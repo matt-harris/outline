@@ -13,7 +13,9 @@ There are a couple of ways to get started with Outline.
 
 - [Download the latest release](https://github.com/matt-harris/outline/archive/master.zip)
 
-- To clone the git repository. Just run the following command `[sudo] git clone git@github.com:matt-harris/outline.git`
+- To clone the git repository. Just run the following command '[sudo] git clone git@github.com:matt-harris/outline.git'
+
+- Install with Bower. Just run the following command 'bower install outline'
 
 ## Documentation
 
