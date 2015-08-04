@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased](https://github.com/matt-harris/outline/tree/HEAD)
 
 ### Changed
+
+## [v1.2.0](https://github.com/matt-harris/outline/tree/v1.2.0) (2015-08-04)
+
+### Changed
 - Updated FontAwesome to version 4.4.0
 - Updated _reset.scss styles to normalize v3.0.2
 - Updated html and body height style
