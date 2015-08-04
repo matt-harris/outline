@@ -30,8 +30,8 @@ time, mark, audio, video {
 }
 
 // correct block display for HTML5 elements on older browsers
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer,
+header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -39,25 +39,34 @@ footer, header, hgroup, menu, nav, section {
 *,
 *:before,
 *:after {
-  box-sizing:         border-box;
+  box-sizing: border-box;
 }
 
 // html & body to inherit height of the viewport
-html,
-body {
-  height: 100%;
-}
-
 html {
+  height: 100%;
   background: #fff;
   text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
 }
 
 // correct inline-block display not defined in IE 8/9
 audio,
 canvas,
+progress,
 video {
   display: inline-block;
+  vertical-align: baseline;
+}
+
+// prevent modern browsers from displaying 'audio' without controls
+// remove excess height in iOS 5 devices
+audio:not([controls]) {
+  display: none;
+  height: 0;
 }
 
 body {
@@ -66,6 +75,11 @@ body {
 
 ol, ul {
   list-style: none;
+}
+
+// remove the gray background color from active links in IE 10
+a {
+  background-color: transparent;
 }
 
 // address outline inconsistency between Chrome and other browsers
