@@ -43,14 +43,14 @@ header, hgroup, main, menu, nav, section, summary {
 }
 
 // html & body to inherit height of the viewport
-html {
+html,
+body {
   height: 100%;
-  background: #fff;
-  text-size-adjust: 100%;
 }
 
-body {
-  min-height: 100%;
+html {
+  background: #fff;
+  text-size-adjust: 100%;
 }
 
 // correct inline-block display not defined in IE 8/9

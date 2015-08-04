@@ -178,15 +178,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 *, *:before, *:after {
   box-sizing: border-box; }
 
+html, body {
+  height: 100%; }
+
 html {
-  height: 100%;
   background: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%; }
-
-body {
-  min-height: 100%; }
 
 audio, canvas, progress, video {
   display: inline-block;
