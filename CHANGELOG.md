@@ -3,7 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased](https://github.com/matt-harris/outline/tree/HEAD)
 
-### Added
+### Changed
+- Updated FontAwesome to version 4.4.0
+- Updated README.md to include bower install
 
 ## [v1.1.0](https://github.com/matt-harris/outline/tree/v1.1.0) (2015-06-23)
 
