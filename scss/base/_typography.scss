@@ -121,6 +121,15 @@ small,
   color: $color-grey;
 }
 
+// dealing with long words in CSS
+// https://justmarkup.com/log/2015/07/31/dealing-with-long-words-in-css/
+.hyphenate,
+%hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
 strong {
   font-weight: bold;
 }
