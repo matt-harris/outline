@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+## [v1.3.0](https://github.com/matt-harris/outline/tree/v1.2.0) (2015-29-10)
+
+### Changed
+- Updated Susy to version 2.2.6
+- Updated all Gulp packages to latest versions
+
+### Added
+- '.hyphenate' class in _typography.scss for dealing with long words in CSS
+
 ## [v1.2.0](https://github.com/matt-harris/outline/tree/v1.2.0) (2015-08-04)
 
 ### Changed
