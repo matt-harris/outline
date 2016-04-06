@@ -5,7 +5,14 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-## [v1.3.0](https://github.com/matt-harris/outline/tree/v1.2.0) (2015-29-10)
+## [v1.4.0](https://github.com/matt-harris/outline/tree/v1.4.0) (2016-04-06)
+
+### Changed
+- Updated Susy to version 2.2.12
+- Updated FontAwesome to version 4.5.0
+- Safari input search field padding fix
+
+## [v1.3.0](https://github.com/matt-harris/outline/tree/v1.3.0) (2015-10-29)
 
 ### Changed
 - Updated Susy to version 2.2.6
