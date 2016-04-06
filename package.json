@@ -1,6 +1,6 @@
 {
   "name": "outline",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "description": "A lightweight front-end boilerplate by Matt Harris",
   "main": "index.js",
   "scripts": {
