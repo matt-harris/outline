@@ -29,4 +29,4 @@ Keep track of updates by following [@matty_h](https://twitter.com/matty_h) on Tw
 
 Outline is free to use under the [MIT License](LICENSE).
 
-Copyright 2015 [Matt Harris](http://www.matt-harris.net)
+Copyright [Matt Harris](http://www.matt-harris.net)
