@@ -870,6 +870,7 @@ table {
     padding: .625rem;
     vertical-align: top; }
 
+table thead > tr,
 .table thead > tr {
   border-bottom: 0.0625rem solid #dce8ef; }
 
