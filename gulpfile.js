@@ -2,75 +2,76 @@
 var gulp = require('gulp');
 
 // Include plugins
-// npm install --save-dev gulp-sass gulp-autoprefixer gulp-minify-css gulp-concat gulp-uglify gulp-imagemin browser-sync gulp-cache gulp-notify gulp-size gulp-rename
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
-var minifycss = require('gulp-minify-css');
+// npm install gulp gulp-sass node-sass gulp-autoprefixer gulp-concat gulp-size gulp-rename gulp-uglify gulp-imagemin browser-sync gulp-cache gulp-notify gulp-size gulp-clean-css --save-dev
 
-var concat = require('gulp-concat');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+sass.compiler = require('node-sass');
+
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+let cleanCSS = require('gulp-clean-css');
+
+const size = require('gulp-size');
+var rename = require('gulp-rename');
+var notify = require('gulp-notify');
+
 var uglify = require('gulp-uglify');
 
-var images = require('gulp-imagemin');
+const imagemin = require('gulp-imagemin');
 
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
+// var browserSync = require('browser-sync');
+// var reload = browserSync.reload;
 
 var cache = require('gulp-cache');
-var notify = require('gulp-notify');
-var size = require('gulp-size');
-var rename = require('gulp-rename');
 
 // Default Task
-gulp.task('default', ['css', 'js', 'images', 'browser-sync', 'watch']);
+gulp.task('default', ['sass', 'js', 'imagemin', 'watch']);
+// 'browser-sync',
 
 // Tasks
 // Compile sass
-gulp.task('css', function() {
-  gulp.src('scss/**/*.scss')
-  .pipe(sass({
-    errLogToConsole: true
-  }))
+gulp.task('sass', function () {
+  return gulp.src('scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
 
-  // auto prefix css
-  .pipe(prefix('last 2 versions'))
-
-  // move css file to folder
-  .pipe(gulp.dest('css/'))
-
-  // rename the file with .min
-  .pipe(rename({
-    suffix: '.min'
-  }))
-
-  // minify the file
-  .pipe(minifycss())
-
-  // move minified css file to folder
-  .pipe(gulp.dest('css/'))
-
-  // get file size (gzipped)
-  .pipe(size({
-    gzip: true
-  }))
-
-  // notify to say the task has complete
-  .pipe(notify({
-    message: 'CSS task complete'
-  }))
+    // auto prefix, sourcemaps, clean css
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer())
+    .pipe(cleanCSS({debug: true}, (details) => {
+      console.log(`${details.name}: ${details.stats.originalSize}`);
+      console.log(`${details.name}: ${details.stats.minifiedSize}`);
+    }))
+    .pipe(concat('all.css'))
+    .pipe(sourcemaps.write('.'))
+    // move css file to folder
+    .pipe(gulp.dest('./../css'))
+    // rename the file with .min
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    // move minified css file to folder
+    .pipe(gulp.dest('./../css'))
+    // get file size (gzipped)
+    .pipe(size({
+      gzip: true
+    }))
+    // notify to say the task has complete
+    .pipe(notify({
+      message: 'CSS task complete'
+    }))
 });
 
 // Concatenate js files and minify
 gulp.task('js', function() {
   gulp.src('js/*.js')
-
   .pipe(concat('bundle.js'))
-
   // minify the file
   .pipe(uglify())
-
   // move js file to folder
   .pipe(gulp.dest('js/min/'))
-
   // notify to say the task has complete
   .pipe(notify({
     message: 'JS task complete'
@@ -78,40 +79,39 @@ gulp.task('js', function() {
 });
 
 // Compress images
-gulp.task('images', function() {
+gulp.task('imagemin', function() {
   gulp.src('img/*.{gif,jpg,png}')
-  .pipe(cache(images({
+  .pipe(cache(imagemin({
     optimizationLevel: 4,
     progressive: true,
     interlaced: true
   })))
-  .pipe(gulp.dest('img/min/'))
-
+  .pipe(gulp.dest('./../img/'))
   // notify to say the task has complete
   .pipe(notify({
-    message: 'Images task complete'
+    message: 'Imagemin task complete'
   }))
 });
 
-// Reload browser
-gulp.task('reload', function () {
-  browserSync.reload();
-});
-
-// Prepare Browser-sync
-gulp.task('browser-sync', function() {
-  browserSync.init(['scss/**/*.scss', 'js/*.js'], {
-  //proxy: 'your_dev_site.url'
-    server: {
-        baseDir: './'
-    }
-  });
-});
+// // Reload browser
+// gulp.task('reload', function () {
+//   browserSync.reload();
+// });
+//
+// // Prepare Browser-sync
+// gulp.task('browser-sync', function() {
+//   browserSync.init(['scss/**/*.scss', 'js/*.js'], {
+//   //proxy: 'your_dev_site.url'
+//     server: {
+//         baseDir: './'
+//     }
+//   });
+// });
 
 // Watch files for changes
 gulp.task('watch', function() {
-  gulp.watch('scss/**/*.scss', ['css']);
+  gulp.watch('scss/**/*.scss', ['sass']);
   gulp.watch('js/*.js', ['js']);
-  gulp.watch('img/*' , ['images']);
-  gulp.watch(['*.html'], ['reload']);
+  gulp.watch('img/*' , ['imagemin']);
 });
+  // gulp.watch(['*.html'], ['reload']);
