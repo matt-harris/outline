@@ -3,7 +3,7 @@
 // e.g. @include respond-min($tablet) {
 //        background-color: $color-primary;
 //      }
-// Docs - http://outlinecss.co.uk/get-started.html#mixins
+// Docs - http://outline-css.surge.sh/get-started.html#mixins
 //---------------------------------------------//
 
 // media queries / breakpoints
@@ -16,7 +16,7 @@
 // ghost buttons
 @mixin ghost-btn($color) {
   color: $color;
-  border: .125rem solid $color;
+  border: 0.125rem solid $color;
   background-color: transparent;
 
   &:hover,
@@ -39,7 +39,7 @@
   @extend %icon-#{$icon};
 }
 
-@mixin icon-before($icon, $padding: .5rem) {
+@mixin icon-before($icon, $padding: 0.5rem) {
   &:before {
     @extend %icon;
     @extend %icon-#{$icon};

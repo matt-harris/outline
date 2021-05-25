@@ -1,11 +1,11 @@
 //---------------------------------------------//
 // Susy config (2.2.5)
-// Docs - http://outlinecss.co.uk/get-started.html#susy
+// Docs - http://outline-css.surge.sh/get-started.html#susy
 //---------------------------------------------//
 
 $susy: (
   columns: 12,
-  gutters: .25,
+  gutters: 0.25,
   gutter-position: split,
   container: $widescreen,
 );

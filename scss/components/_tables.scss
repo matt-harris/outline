@@ -1,7 +1,7 @@
 //---------------------------------------------//
 // Tables - Outline
 // Basic styles for tables
-// Docs - http://outlinecss.co.uk/get-started.html#tables
+// Docs - http://outline-css.surge.sh/get-started.html#tables
 //---------------------------------------------//
 
 table {
@@ -21,7 +21,7 @@ table {
 
   th,
   td {
-    padding: .625rem;
+    padding: 0.625rem;
     vertical-align: top;
   }
 }
@@ -29,7 +29,7 @@ table {
 table,
 .table {
   thead > tr {
-    border-bottom: .0625rem solid $color-grey-light;
+    border-bottom: 0.0625rem solid $color-grey-light;
   }
 }
 
@@ -41,25 +41,25 @@ table,
 
 .table--border-rows {
   tr {
-    border-bottom: .0625rem solid $color-grey-light;
+    border-bottom: 0.0625rem solid $color-grey-light;
   }
 }
 
 .table--border-cells {
   th,
   td {
-    border: .0625rem solid $color-grey-light;
+    border: 0.0625rem solid $color-grey-light;
   }
 }
 
 .table--condensed {
   thead > tr {
-    border-bottom: .0625rem solid $color-grey-light;
+    border-bottom: 0.0625rem solid $color-grey-light;
   }
 
   th,
   td {
-    padding: .25rem;
+    padding: 0.25rem;
   }
 }
 
@@ -71,6 +71,6 @@ table,
   -webkit-overflow-scrolling: touch;
 
   table {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }

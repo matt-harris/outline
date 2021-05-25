@@ -1,14 +1,14 @@
 //---------------------------------------------//
 // Buttons - Outline
 // CSS styles for buttons
-// Docs - http://outlinecss.co.uk/get-started.html#buttons
+// Docs - http://outline-css.surge.sh/get-started.html#buttons
 //---------------------------------------------//
 
 button,
 .btn,
 %btn {
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   display: inline-block;
   font-family: $font-secondary;
   font-size: inherit;
@@ -21,7 +21,7 @@ button,
   outline: none;
   cursor: pointer;
   vertical-align: middle;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover,
   &:focus,
@@ -31,9 +31,10 @@ button,
     background-color: shade($color-primary, 15%);
   }
 
-  &.btn--disabled, &[disabled] {
+  &.btn--disabled,
+  &[disabled] {
     cursor: not-allowed;
-    opacity: .6;
+    opacity: 0.6;
   }
 }
 
@@ -76,27 +77,27 @@ button,
 
 .btn--small,
 %btn--small {
-  padding: .25rem .75rem;
-  font-size: .875rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
 }
 
 .btn--large,
 %btn--large {
-  padding: .5rem 1.625rem;
+  padding: 0.5rem 1.625rem;
   font-size: 1.375rem;
   line-height: normal;
 }
 
 .btn--xlarge,
 %btn--xlarge {
-  padding: .75rem 1.75rem;
+  padding: 0.75rem 1.75rem;
   font-size: 1.375rem;
   line-height: normal;
 }
 
 .btn--rounded,
 %btn--rounded {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 .btn--pill,
@@ -111,9 +112,9 @@ button,
 
 .btn--block,
 %btn-block,
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
+input[type='submit'].btn-block,
+input[type='reset'].btn-block,
+input[type='button'].btn-block {
   margin-right: 0;
   margin-left: 0;
   padding-right: 0;

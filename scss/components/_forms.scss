@@ -1,7 +1,7 @@
 //---------------------------------------------//
 // Forms - Outline
 // Basic styles for form elements
-// Docs - http://outlinecss.co.uk/get-started.html#forms
+// Docs - http://outline-css.surge.sh/get-started.html#forms
 //---------------------------------------------//
 
 form,
@@ -10,7 +10,7 @@ fieldset {
 }
 
 label {
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
   display: block;
   font-family: $font-secondary;
   cursor: pointer;
@@ -20,13 +20,13 @@ fieldset {
   margin-top: $spacing;
   margin-bottom: $spacing;
   padding: $spacing;
-  border: .0625rem solid $color-grey;
+  border: 0.0625rem solid $color-grey;
 }
 
 legend {
   margin: 0;
-  margin-left: -.5rem;
-  padding: 0 .5rem;
+  margin-left: -0.5rem;
+  padding: 0 0.5rem;
   display: block;
   font-family: $font-secondary;
 }
@@ -37,30 +37,30 @@ legend {
   @extend %clearfix;
 }
 
-input[type="date"],
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
+input[type='date'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
 textarea,
 select {
-  padding: .375rem;
+  padding: 0.375rem;
   display: block;
   width: 100%;
   height: 2.375rem;
   font: inherit;
   line-height: 1.5;
   color: $color-grey-dark;
-  border: .0625rem solid $color-grey;
+  border: 0.0625rem solid $color-grey;
 }
 
 // inputs 'inline-block' by default
-input[type="checkbox"],
-input[type="image"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='image'],
+input[type='radio'] {
   margin-bottom: 0;
   display: inline-block;
   width: auto;
@@ -79,7 +79,7 @@ select {
 }
 
 // extend '.btn'
-input[type="submit"] {
+input[type='submit'] {
   @extend %btn;
   width: auto;
   margin-bottom: 0;
@@ -89,10 +89,10 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: $color-primary;
-  border-color: rgba($color-primary, .8);
+  border-color: rgba($color-primary, 0.8);
   outline: 0;
   outline: thin dotted \9; // IE6-9
-  transition: border .2s linear;
+  transition: border 0.2s linear;
 }
 
 input[disabled],

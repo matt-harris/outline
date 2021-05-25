@@ -1,13 +1,13 @@
 //---------------------------------------------//
 // Helper classes - Outline
-// Docs - http://outlinecss.co.uk/get-started.html#helpers
+// Docs - http://outline-css.surge.sh/get-started.html#helpers
 //---------------------------------------------//
 
 // clearfix
 .clearfix,
 %clearfix {
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -157,7 +157,6 @@
   display: block;
   margin: 0 auto $spacing auto;
 }
-
 
 // make text uppercase
 .is-uppercase,

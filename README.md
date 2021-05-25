@@ -1,4 +1,5 @@
 # Outline
+
 Outline is a simple CSS starter responsive boilerplate for any new web project, created by [Matt Harris](https://twitter.com/matty_h)
 
 ## The clean & simple responsive framework
@@ -19,7 +20,7 @@ There are a couple of ways to get started with Outline.
 
 ## Documentation
 
-View full documentation at: [http://outlinecss.co.uk/get-started.html](http://outlinecss.co.uk/get-started.html)
+View full documentation at: [http://outline-css.surge.sh/get-started.html](http://outline-css.surge.sh/get-started.html)
 
 ## Updates
 

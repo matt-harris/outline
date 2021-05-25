@@ -2,42 +2,26 @@
 // Outline v0.1
 // A lightweight front-end boilerplate by Matt Harris
 // Free to use under the MIT License
-// Docs - http://outlinecss.co.uk/get-started.html
+// Docs - http://outline-css.surge.sh/get-started.html
 //---------------------------------------------//
 
-@import "../susy/susy";
+@import '../susy/susy';
 
 // Vendors and external stylesheets
-@import
-  "vendors/font-awesome";
+@import 'vendors/font-awesome';
 
 // Utilities - make sure you import variables first
-@import
-  "utils/variables",
-  "utils/functions",
-  "utils/mixins",
-  "utils/helpers";
+@import 'utils/variables', 'utils/functions', 'utils/mixins', 'utils/helpers';
 
 // Base
-@import
-  "base/print",
-  "base/reset",
-  "base/typography";
+@import 'base/print', 'base/reset', 'base/typography';
 
 // Layout
-@import
-  "layout/susy-config";
+@import 'layout/susy-config';
 
 // Components
-@import
-  "components/buttons",
-  "components/code",
-  "components/embed",
-  "components/forms",
-  "components/lists",
-  "components/media",
-  "components/pagination",
-  "components/tables";
+@import 'components/buttons', 'components/code', 'components/embed', 'components/forms',
+  'components/lists', 'components/media', 'components/pagination', 'components/tables';
 
 // Pages
 

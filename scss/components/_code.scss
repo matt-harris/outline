@@ -1,7 +1,7 @@
 //---------------------------------------------//
 // Code - Outline
 // Basic styling for code / pre / kbd
-// Docs - http://outlinecss.co.uk/get-started.html#code
+// Docs - http://outline-css.surge.sh/get-started.html#code
 //---------------------------------------------//
 
 code,
@@ -10,7 +10,7 @@ pre,
 samp {
   font-family: $font-monospace;
   font-weight: normal;
-  font-size: .875rem;
+  font-size: 0.875rem;
   color: $color-grey-dark;
 }
 
@@ -25,7 +25,7 @@ pre {
 }
 
 code {
-  padding: .25rem;
+  padding: 0.25rem;
   background-color: tint($color-grey-light, 50%);
 }
 

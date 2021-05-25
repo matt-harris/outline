@@ -1,7 +1,7 @@
 //---------------------------------------------//
 //  Embed containers - Outline
 //  Basic styles to make embedded content responsive
-// Docs - http://outlinecss.co.uk/get-started.html#embed
+// Docs - http://outline-css.surge.sh/get-started.html#embed
 //---------------------------------------------//
 
 .embed-wrap {
@@ -14,7 +14,8 @@
 
   iframe {
     position: absolute;
-    top:0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }

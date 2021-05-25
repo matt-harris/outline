@@ -1,15 +1,15 @@
 //---------------------------------------------//
 // Functions -- Outline
 // e.g. color: tint($color-grey-dark, 30%);
-// Docs - http://outlinecss.co.uk/get-started.html#functions
+// Docs - http://outline-css.surge.sh/get-started.html#functions
 //---------------------------------------------//
 
 // Slightly lighten a colour
-@function tint($color, $percent){
+@function tint($color, $percent) {
   @return mix(white, $color, $percent);
 }
 
 // Slightly darken a colour
-@function shade($color, $percent){
+@function shade($color, $percent) {
   @return mix(black, $color, $percent);
 }

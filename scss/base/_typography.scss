@@ -3,7 +3,7 @@
 // Set headings, font, link , hr, sub & sup,
 // abbreviation, highlighting, figure
 // & blockquote styles
-// Docs - http://outlinecss.co.uk/get-started.html#typography
+// Docs - http://outline-css.surge.sh/get-started.html#typography
 //---------------------------------------------//
 
 html {
@@ -17,9 +17,24 @@ body {
   color: $color-grey-dark;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
-%h1, %h2, %h3, %h4, %h5, %h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+%h1,
+%h2,
+%h3,
+%h4,
+%h5,
+%h6 {
   font-family: $font-secondary;
   font-weight: normal;
 }
@@ -29,8 +44,8 @@ h1,
 %h1 {
   font-size: 1.875rem;
   font-weight: 700;
-  margin-top: .9375rem;
-  margin-bottom: .75rem;
+  margin-top: 0.9375rem;
+  margin-bottom: 0.75rem;
 
   @include respond-min($tablet-wide) {
     font-size: 2.5rem;
@@ -50,13 +65,13 @@ h2,
 .h2,
 %h2 {
   font-size: 1.688rem;
-  margin-top: .8125rem;
-  margin-bottom: .6875rem;
+  margin-top: 0.8125rem;
+  margin-bottom: 0.6875rem;
 
   @include respond-min($tablet-wide) {
     font-size: 1.875rem;
-    margin-top: .9375rem;
-    margin-bottom: .75rem;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -64,32 +79,32 @@ h3,
 .h3,
 %h3 {
   font-size: 1.688rem;
-  margin-top: .8125rem;
-  margin-bottom: .6875rem;
+  margin-top: 0.8125rem;
+  margin-bottom: 0.6875rem;
 }
 
 h4,
 .h4,
 %h4 {
   font-size: 1.5rem;
-  margin-top: .75rem;
-  margin-bottom: .625rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.625rem;
 }
 
 h5,
 .h5,
 %h5 {
   font-size: 1.375rem;
-  margin-top: .6875rem;
-  margin-bottom: .5625rem;
+  margin-top: 0.6875rem;
+  margin-bottom: 0.5625rem;
 }
 
 h6,
 .h6,
 %h6 {
   font-size: 1.25rem;
-  margin-top: .625rem;
-  margin-bottom: .5rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.5rem;
 }
 
 p {
@@ -114,7 +129,7 @@ p {
 small,
 .text-small,
 %text-small {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .text-muted {
@@ -170,7 +185,7 @@ a:hover img {
 hr {
   margin: $spacing auto;
   border: 0;
-  border-top: .0625rem solid $color-grey;
+  border-top: 0.0625rem solid $color-grey;
   border-bottom: 0 solid #fff;
 }
 
@@ -178,7 +193,7 @@ hr {
 sub,
 sup {
   position: relative;
-  margin-left: .25rem;
+  margin-left: 0.25rem;
   font-size: 85%;
   font-weight: bold;
   line-height: 0;
@@ -186,23 +201,23 @@ sup {
 }
 
 sup {
-  top: -.5rem;
+  top: -0.5rem;
 }
 
 sub {
-  bottom: -.25rem;
+  bottom: -0.25rem;
 }
 
 // abbreviation or acronym
 abbr[title] {
-  border-bottom: .0625rem dotted $color-grey-dark;
+  border-bottom: 0.0625rem dotted $color-grey-dark;
 }
 
 // mark element (highlight)
 mark {
   background-color: yellow;
   color: $color-grey-dark;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 // blockquote
@@ -210,11 +225,11 @@ blockquote {
   margin-bottom: $spacing;
   padding-left: 1rem;
   padding-right: $spacing;
-  border-left: .25rem solid $color-primary;
+  border-left: 0.25rem solid $color-primary;
   font-family: $font-secondary;
 
   p:last-of-type {
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
   }
 
   cite {
@@ -229,12 +244,12 @@ figure {
 }
 
 figcaption {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-family: $font-secondary;
-  font-size: .875rem;
+  font-size: 0.875rem;
   text-align: center;
-  border-bottom: .0625rem solid $color-grey-light;
+  border-bottom: 0.0625rem solid $color-grey-light;
 }
 
 // highlighting colors

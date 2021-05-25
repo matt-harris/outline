@@ -1,0 +1,1908 @@
+<!--
+  _    _ _                           _
+ | |  | (_)                         | |
+ | |__| |_ _ __ ___   _ __ ___   ___| |
+ |  __  | | '__/ _ \ | '_ ` _ \ / _ \ |
+ | |  | | | | |  __/ | | | | | |  __/_|
+ |_|  |_|_|_|  \___| |_| |_| |_|\___(_)
+
+Need a Front End Developer? Take my card.
+http://matt-harris.net/take-my-card.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Outline - The clean & simple responsive CSS framework.</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="favicon-152.png" />
+    <meta name="msapplication-TileColor" content="#38a1d6" />
+    <meta name="msapplication-TileImage" content="favicon-152.png" />
+    <!-- google fonts -->
+    <link
+      href="//fonts.googleapis.com/css?family=Lato:400,700,900|Merriweather:400,400italic,700,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- site style -->
+    <link href="css/outline.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="js/min/modernizr.custom.js"></script>
+  </head>
+  <body>
+    <div class="clearfix" role="main">
+      <div class="sidebar hide-for-medium-down">
+        <a class="logo" href="/">
+          <img src="img/min/logo.png" width="200" alt="Outline CSS framework" />
+        </a>
+
+        <nav>
+          <ul class="sidebar__nav list--unstyled">
+            <li>
+              <a href="#get-started" data-scroll>Get started</a>
+              <ul>
+                <li>
+                  <a href="#overview" data-scroll>Overview</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#susy" data-scroll>Susy</a>
+            </li>
+            <li>
+              <a href="#colours" data-scroll>Colours</a>
+            </li>
+            <li>
+              <a href="#breakpoints" data-scroll>Breakpoints</a>
+            </li>
+            <li>
+              <a href="#typography" data-scroll>Typography</a>
+              <ul>
+                <li>
+                  <a href="#headings" data-scroll>Headings</a>
+                </li>
+                <li>
+                  <a href="#fonts" data-scroll>Fonts</a>
+                </li>
+                <li>
+                  <a href="#body" data-scroll>Body</a>
+                </li>
+                <li>
+                  <a href="#links" data-scroll>Links</a>
+                </li>
+                <li>
+                  <a href="#hr" data-scroll>Horizonal line</a>
+                </li>
+                <li>
+                  <a href="#blockquote" data-scroll>Blockquote</a>
+                </li>
+                <li>
+                  <a href="#figure" data-scroll>Figure</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#components" data-scroll>Components</a>
+              <ul>
+                <li>
+                  <a href="#buttons" data-scroll>Buttons</a>
+                </li>
+                <li>
+                  <a href="#code" data-scroll>Code</a>
+                </li>
+                <li>
+                  <a href="#embed" data-scroll>Embed</a>
+                </li>
+                <li>
+                  <a href="#forms" data-scroll>Forms</a>
+                </li>
+                <li>
+                  <a href="#lists" data-scroll>Lists</a>
+                </li>
+                <li>
+                  <a href="#media-objects" data-scroll>Media objects</a>
+                </li>
+                <li>
+                  <a href="#pagination" data-scroll>Pagination</a>
+                </li>
+                <li>
+                  <a href="#tables" data-scroll>Tables</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#utilities" data-scroll>Utilities</a>
+              <ul>
+                <li>
+                  <a href="#variables" data-scroll>Variables</a>
+                </li>
+                <li>
+                  <a href="#helpers" data-scroll>Helpers</a>
+                </li>
+                <li>
+                  <a href="#mixins" data-scroll>Mixins</a>
+                </li>
+                <li>
+                  <a href="#functions" data-scroll>Functions</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#vendor" data-scroll>Vendor</a>
+              <ul>
+                <li>
+                  <a href="#font-awesome" data-scroll>Font awesome</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="docs">
+        <div class="nav-bar clearfix">
+          <a class="logo hide-for-medium-up float-left" href="/">
+            <img src="img/min/logo.png" alt="Outline CSS framework" />
+          </a>
+
+          <i class="nav-icon" id="trigger-overlay"></i>
+
+          <div class="nav-overlay">
+            <i class="nav-close"></i>
+            <nav class="nav">
+              <ul>
+                <li class="nav__item">
+                  <a href="/">Home</a>
+                </li>
+                <li class="nav__item">
+                  <a href="get-started.html">Get started</a>
+                </li>
+                <li class="nav__item">
+                  <a href="https://github.com/matt-harris/outline">View on GitHub</a>
+                </li>
+                <li class="nav__item">
+                  <a href="http://outline-mail.surge.sh/" target="_blank"
+                    >Outline Email framework</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="docs__content clearfix">
+          <section class="docs__item" id="get-started">
+            <h1 class="docs__heading">Get started</h1>
+
+            <p>There are a few ways to get started with Outline.</p>
+
+            <p>
+              Download the
+              <a href="https://github.com/matt-harris/outline/archive/master.zip">latest release</a>
+              from GitHub.
+            </p>
+
+            <p>Install with Bower</p>
+
+            <pre><code>bower install outline</code></pre>
+
+            <p>
+              To clone the <a href="https://github.com/matt-harris/outline">git repository</a>. Just
+              run the following command.
+            </p>
+
+            <pre><code>[sudo] git clone git@github.com:matt-harris/outline.git</code></pre>
+          </section>
+
+          <section class="docs__item" id="overview">
+            <h2 class="docs__heading">Overview</h2>
+
+            <h4>Compiling Sass</h4>
+
+            <p>
+              You will need a Sass compiler to watch and compile your Sass files into a CSS file.
+            </p>
+
+            <p>
+              Outline uses <a href="http://gulpjs.com/">gulp.js</a> to watch and compile the Sass
+              files but also makes use of build tasks including
+              <a href="https://github.com/postcss/autoprefixer">autoprefixer</a>, minifying files,
+              JS file concatenation, image compression and browser refresh. Outline comes with a
+              fully commented <code>gulpfile.js</code> and <code>package.json</code> file which
+              lists the plugins used. For more information about getting sarted with gulp read this
+              excellent
+              <a href="http://markgoodyear.com/2014/01/getting-started-with-gulp/"
+                >intro by Mark Goodyear</a
+              >
+            </p>
+
+            <p>
+              Of course you can also use a compiler / build tool of your choice. A couple of the
+              more popular options are:-
+            </p>
+
+            <ul>
+              <li><a href="https://prepros.io/">Prepros</a></li>
+              <li><a href="https://incident57.com/codekit/">CodeKit</a></li>
+              <li><a href="http://gruntjs.com/">Grunt</a></li>
+            </ul>
+
+            <h4>Writing CSS</h4>
+
+            <p>
+              Outline follows the BEM (Block, Element, Modifier) method for writing &amp; organising
+              CSS. BEM helps keep CSS logical and predictable. The naming convention follows this
+              pattern:
+            </p>
+
+            <pre><code>.block {}
+.block__element {}
+.block__element--modifier {}
+</code></pre>
+
+            <ul>
+              <li>.block represents the higher level of an abstraction or component.</li>
+              <li>
+                .block__element represents a descendent of .block that helps form .block as a whole.
+              </li>
+              <li>.block--modifier represents a different state or version of .block.</li>
+            </ul>
+
+            <p>
+              For more information about BEM, read
+              <a
+                href="http://www.csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/"
+                >this</a
+              >
+              and <a href="https://css-tricks.com/bem-101/">this</a>.
+            </p>
+
+            <h4>Writing Sass</h4>
+
+            <p>
+              Have a read of the excellent <a href="http://sass-guidelin.es/">Sass guidelines</a>.
+              It's a styleguide for Sass that helps everyone to write maintainable and scalable
+              Sass.
+            </p>
+
+            <h4>Start creating your HTML</h4>
+
+            <p>I’ve included <code>index.html</code> as a starting point.</p>
+          </section>
+
+          <hr class="hr-alt" />
+
+          <section class="docs__item" id="susy">
+            <h2 class="docs__heading">Susy</h2>
+
+            <p>
+              <a href="http://susy.oddbird.net/">Susy</a> [soo-zee], is a Sass add on for grids.
+              Susy allows you to build custom responsive grids on demand, rather than a framework.
+              This allows you to:-
+            </p>
+
+            <ul>
+              <li>Separate style from markup</li>
+              <li>Simple modular maintenance</li>
+              <li>Only need to write necessary CSS (No bloat)</li>
+            </ul>
+
+            <p>
+              I have created a
+              <a href="http://codepen.io/collection/DKpqjq/">Codepen collection</a> of example Susy
+              layouts.
+            </p>
+
+            <blockquote>
+              <p>I like the idea of grids-on-demand, rather than a strict framework.</p>
+              <cite>— Chris Coyier, CodePen</cite>
+            </blockquote>
+
+            <h4>Resources</h4>
+
+            <ul>
+              <li>
+                <a href="http://susy.oddbird.net/demos/">A list of Susy tutorials</a>
+              </li>
+              <li>
+                <a href="http://leveluptuts.com/tutorials/susy-tutorials"
+                  >Susy Tutorials - 11 Parts (video)</a
+                >
+              </li>
+              <li>
+                <a href="http://css-tricks.com/build-web-layouts-easily-susy/"
+                  >Build Web Layouts Easily with Susy</a
+                >
+              </li>
+            </ul>
+          </section>
+
+          <hr class="hr-alt" />
+
+          <section class="docs__item" id="colours">
+            <h2 class="docs__heading">Colours</h2>
+
+            <h4>Palette</h4>
+
+            <div class="swatch">
+              <div class="swatch__colour bg-primary"></div>
+              <div class="swatch__text">Primary</div>
+            </div>
+
+            <div class="swatch">
+              <div class="swatch__colour bg-secondary"></div>
+              <div class="swatch__text">Secondary</div>
+            </div>
+
+            <div class="swatch">
+              <div class="swatch__colour bg-tertiary"></div>
+              <div class="swatch__text">Tertiary</div>
+            </div>
+
+            <div class="swatch">
+              <div class="swatch__colour bg-grey"></div>
+              <div class="swatch__text">Grey</div>
+            </div>
+
+            <div class="swatch">
+              <div class="swatch__colour bg-grey-light"></div>
+              <div class="swatch__text">Light grey</div>
+            </div>
+
+            <div class="swatch">
+              <div class="swatch__colour bg-grey-dark"></div>
+              <div class="swatch__text">Dark grey</div>
+            </div>
+
+            <h4>Helper colours</h4>
+
+            <p>
+              You add background and text colours to your project. You can add these classes to a
+              tag e.g <code>.bg-primary</code> or use <code>@extend</code> e.g.
+              <code>@extend %bg-primary</code>.
+            </p>
+
+            <pre><code>// background colours
+.bg-primary // $color-primary
+.bg-secondary // $color-secondary
+.bg-tertiary // $color-tertiary
+.bg-grey // $color-grey
+.bg-grey-light // $color-grey-light
+.bg-grey-dark // $color-grey-dark
+.bg-white // #fff
+
+// text colours
+.text-primary // $color-primary
+.text-secondary // $color-secondary
+.text-tertiary // $color-tertiary
+.text-grey // $color-grey
+.text-grey-light // $color-grey-light
+.text-white // #fff
+</code></pre>
+          </section>
+
+          <hr class="hr-alt" />
+
+          <section class="docs__item" id="breakpoints">
+            <h2 class="docs__heading">Breakpoints</h2>
+
+            <p>
+              Outline uses the following breakpoints as a starting point. To add new breakpoints go
+              into the <code>utils/_variables.scss</code> file and add a new breakpoint variable.
+            </p>
+
+            <pre><code>$mobile-landscape: 30rem; // 480px
+$tablet: 40rem; // 640px
+$tablet-wide: 48rem; // 768px
+$desktop: 64rem; // 1024px
+$widescreen: 71.25rem; // 1140px
+</code></pre>
+          </section>
+
+          <hr class="hr-alt" />
+
+          <section class="docs__item" id="typography">
+            <h2 class="docs__heading">Typography <code>base/_typography.scss</code></h2>
+          </section>
+
+          <section class="docs__item" id="headings">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+
+            <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="fonts">
+            <h2 class="docs__heading">Fonts</h2>
+
+            <p>Outline uses a google font combination of Lato and Merriweather.</p>
+
+            <p class="font-primary">This is the Merriweather font included in Outline.</p>
+
+            <p class="font-secondary">This is the Lato font included in Outline.</p>
+
+            <p>
+              To change the fonts goto <a href="http://www.google.com/fonts">Google fonts</a>,
+              select the fonts you require and then replace the following code on your website with
+              the new code provided.
+            </p>
+
+            <pre><code>&lt;link href=&quot;//fonts.googleapis.com/css?family=Lato:400,700,900|Merriweather:400,400italic,700,700italic&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="body">
+            <h2 class="docs__heading">Body</h2>
+
+            <h4>Paragragh</h4>
+
+            <p>
+              All right me luvver ipsum dolor sit amet dolor dolore non gashead jammer veniam, me
+              luvver tamorra dint aute as-dal. Dint fugiat ut culpa jammy cheers drive. In warter
+              wheres attoo ut oozee idut, ceptible irure. Yer discolated ginormous, bemmie you gone
+              and done it hark at ee fornbree excepteur glider me babber.
+            </p>
+
+            <pre><code>&lt;p&gt;All right me luvver ipsum dolor sit amet dolor dolore non gashead jammer veniam, me luvver tamorra dint aute as-dal. Dint fugiat ut culpa jammy cheers drive. In warter wheres attoo ut oozee idut, ceptible irure. Yer discolated ginormous, bemmie you gone and done it hark at ee fornbree excepteur glider me babber.&lt;/p&gt;
+</code></pre>
+
+            <h4>Lead text</h4>
+
+            <p class="lead">
+              All right me luvver ipsum dolor sit amet dolor dolore non gashead jammer veniam, me
+              luvver tamorra dint aute as-dal.
+            </p>
+
+            <pre><code>&lt;p class=&quot;lead&quot;&gt;...&lt;/p&gt;
+</code></pre>
+
+            <h4>Small</h4>
+
+            <small>This text is small.</small>
+
+            <p class="text-small">This text is small.</p>
+
+            <pre><code>&lt;small&gt;This text is small.&lt;/small&gt;
+&lt;p class=&quot;text-small&quot;&gt;This text is small&lt;/p&gt;
+</code></pre>
+
+            <h4>Muted</h4>
+
+            <p class="text-muted">This text is muted.</p>
+
+            <pre><code>&lt;p class=&quot;text-muted&quot;&gt;This text is muted.&lt;/p&gt;
+</code></pre>
+
+            <h4>Hyphenate</h4>
+
+            <h6 class="hyphenate">ThisIsAReallyLongWordAndDoesNotBreakLayout</h6>
+
+            <pre><code>&lt;h3 class=&quot;hyphenate&quot;&gt;ThisIsAReallyLongWordAndDoesNotBreakLayout&lt;/h3&gt;
+</code></pre>
+
+            <h4>Strong</h4>
+
+            <p>This text is <strong>strong</strong>.</p>
+
+            <pre><code>&lt;p&gt;This text is &lt;strong&gt;strong&lt;/strong&gt;.&lt;/p&gt;
+</code></pre>
+
+            <h4>Emphasis</h4>
+
+            <p>This text is <em>emphasised</em>.</p>
+
+            <pre><code>&lt;p&gt;This text is &lt;em&gt;emphasised&lt;/em&gt;.&lt;/p&gt;
+</code></pre>
+
+            <h4>Subscript &amp; Superscript</h4>
+
+            <p>This text is <sub>subscripted</sub></p>
+
+            <p>This text is <sup>superscripted</sup></p>
+
+            <pre><code>&lt;p&gt;This text is &lt;sub&gt;subscripted&lt;/sub&gt;&lt;/p&gt;
+&lt;p&gt;This text is &lt;sup&gt;superscripted&lt;/sup&gt;&lt;/p&gt;
+</code></pre>
+
+            <h4>Mark</h4>
+
+            <p>The <code>&lt;mark&gt;</code> element is used to <mark>highlight</mark> text.</p>
+
+            <pre><code>&lt;p&gt;The &lt;code&gt;&lt;mark&gt;&lt;/code&gt; element is used to &lt;mark&gt;highlight&lt;/mark&gt; text.&lt;/p&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="links">
+            <h2 class="docs__heading">Links</h2>
+
+            <p>
+              This is the <a href="#">link</a> style. Text hyperlinks are used for
+              <a href="#">destinations</a>, or moving from one page to <a href="#">another</a>.
+            </p>
+
+            <pre><code>&lt;p&gt;This is the &lt;a href=&quot;#&quot;&gt;link&lt;/a&gt; style. Text hyperlinks are used for &lt;a href=&quot;#&quot;&gt;destinations&lt;/a&gt;, or moving from one page to &lt;a href=&quot;#&quot;&gt;another&lt;/a&gt;.&lt;/p&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="hr">
+            <h2 class="docs__heading">Horizontal line</h2>
+
+            <hr />
+
+            <pre><code>&lt;hr&gt;</code></pre>
+          </section>
+
+          <section class="docs__item" id="blockquote">
+            <h2 class="docs__heading">Blockquote</h2>
+
+            <blockquote>
+              <p>
+                Ginormous hark at ee mint in it casnt. Hark at ee idut ceptible, mint in it lectric
+                me eds erting i didnt do nothing dinnum gashead bemminser eadfit inchew glider.
+              </p>
+              <cite>Brizzle Ipsum, Made in Bristol</cite>
+            </blockquote>
+
+            <pre><code>&lt;blockquote&gt;
+  &lt;p&gt;Ginormous hark at ee mint in it casnt. Hark at ee idut ceptible, mint in it lectric me eds erting i didnt do nothing dinnum gashead bemminser eadfit inchew glider.&lt;/p&gt;
+  &lt;cite&gt;Brizzle Ipsum, Made in Bristol&lt;/cite&gt;
+&lt;/blockquote&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="figure">
+            <h2 class="docs__heading">Figure</h2>
+
+            <figure>
+              <img src="img/min/16x9-img-placholder.png" />
+              <figcaption>This is a caption for the above image.</figcaption>
+            </figure>
+
+            <pre><code>&lt;figure&gt;
+  &lt;img src=&quot;img/min/16x9-img-placholder.png&quot; &gt;
+  &lt;figcaption&gt;This is a caption for the above image.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+          </section>
+
+          <hr class="hr-alt" />
+
+          <section class="docs__item" id="components">
+            <h2 class="docs__heading">Components</h2>
+          </section>
+
+          <section class="docs__item" id="buttons">
+            <h2 class="docs__heading">Buttons <code>components/_buttons.scss</code></h2>
+
+            <p>
+              Buttons are created using the <code>button</code> element or adding the
+              <code>.btn</code> class to any element. You can add some of the following classes
+              below to get different design combinations.
+            </p>
+
+            <button type="button">Default</button>
+            <a class="btn" href="#" role="button">Default</a>
+
+            <pre><code>&lt;button type=&quot;button&quot;&gt;Default&lt;/button&gt;
+&lt;a class=&quot;btn&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Default&lt;/a&gt;
+</code></pre>
+
+            <h4>Colours</h4>
+
+            <button class="btn--primary" type="button">Colour Primary</button>
+            <button class="btn--secondary" type="button">Colour Secondary</button>
+            <button class="btn--tertiary" type="button">Colour Tertiary</button>
+            <button class="btn--grey" type="button">Colour Grey</button>
+
+            <pre><code>&lt;button class=&quot;btn--primary&quot; type=&quot;button&quot;&gt;Colour Primary&lt;/button&gt;
+&lt;button class=&quot;btn--secondary&quot; type=&quot;button&quot;&gt;Colour Secondary&lt;/button&gt;
+&lt;button class=&quot;btn--tertiary&quot; type=&quot;button&quot;&gt;Colour Tertiary&lt;/button&gt;
+&lt;button class=&quot;btn--grey&quot; type=&quot;button&quot;&gt;Colour Grey&lt;/button&gt;
+</code></pre>
+
+            <h4>Sizes</h4>
+
+            <button class="btn--small" type="button">Small</button>
+            <button class="btn" type="button">Default</button>
+            <button class="btn--large" type="button">Large</button>
+            <button class="btn--xlarge" type="button">Xtra Large</button>
+
+            <pre><code>&lt;button class=&quot;btn--small&quot; type=&quot;button&quot;&gt;Small&lt;/button&gt;
+&lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;Default&lt;/button&gt;
+&lt;button class=&quot;btn--large&quot; type=&quot;button&quot;&gt;Large&lt;/button&gt;
+&lt;button class=&quot;btn--xlarge&quot; type=&quot;button&quot;&gt;Xtra Large&lt;/button&gt;
+</code></pre>
+
+            <h4>Styles</h4>
+
+            <button class="btn--rounded" type="button">Rounded</button>
+            <button class="btn--pill" type="button">Pill</button>
+            <button class="btn--ghost" type="button">Ghost</button>
+
+            <pre><code>&lt;button class=&quot;btn--rounded&quot; type=&quot;button&quot;&gt;Rounded&lt;/button&gt;
+&lt;button class=&quot;btn--pill&quot; type=&quot;button&quot;&gt;Pill&lt;/button&gt;
+&lt;button class=&quot;btn--ghost&quot; type=&quot;button&quot;&gt;Ghost&lt;/button&gt;
+</code></pre>
+
+            <h4>Block</h4>
+
+            <button class="btn--block" type="button">Block</button>
+
+            <pre><code>&lt;button class=&quot;btn--block&quot; type=&quot;button&quot;&gt;Block&lt;/button&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="code">
+            <h2 class="docs__heading">Code <code>components/_code.scss</code></h2>
+
+            <p>
+              A block of code should be contained within <code>&lt;pre&gt;</code> and
+              <code>&lt;code&gt;</code> tags.
+            </p>
+
+            <pre><code>&lt;pre&gt;&lt;code&gt;.text {
+  color: red;
+}
+
+.footer .text {
+  color: blue;
+}&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+            <p>
+              Wrap inline code within the <code>&lt;code&gt;</code> element e.g. This is a
+              <code>&lt;table&gt;</code> tag.
+            </p>
+
+            <pre><code>&lt;p&gt;This is a &lt;code&gt;table&lt;/code&gt; tag.&lt;/p&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="embed">
+            <h2 class="docs__heading">Embed <code>components/_embed.scss</code></h2>
+
+            <p>
+              To make embedded content responsive wrap it with the class <code>.embed-wrap</code>.
+            </p>
+
+            <pre><code>&lt;div class=&quot;embed-wrap&quot;&gt;
+  embedded content goes here...
+&lt;/div&gt;
+</code></pre>
+
+            <h4>YouTube example</h4>
+
+            <div class="embed-wrap">
+              <iframe
+                width="853"
+                height="480"
+                src="https://www.youtube.com/embed/kRmbVOI6oIM?rel=0"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <pre><code>&lt;div class=&quot;embed-wrap&quot;&gt;
+  &lt;iframe width=&quot;853&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/kRmbVOI6oIM?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Vimeo example</h4>
+
+            <div class="embed-wrap">
+              <iframe
+                src="https://player.vimeo.com/video/67476280"
+                width="500"
+                height="281"
+                frameborder="0"
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <pre><code>&lt;div class=&quot;embed-wrap&quot;&gt;
+  &lt;iframe src=&quot;https://player.vimeo.com/video/67476280&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Google Maps</h4>
+
+            <div class="embed-wrap">
+              <iframe
+                width="425"
+                height="350"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=bristol&amp;aq=&amp;sll=51.468489,-2.590709&amp;sspn=0.321233,0.837021&amp;ie=UTF8&amp;hq=&amp;hnear=Bristol,+City+of+Bristol,+United+Kingdom&amp;ll=51.468552,-2.590714&amp;spn=0.321332,0.837021&amp;t=m&amp;z=11&amp;output=embed&amp;iwloc=near"
+              ></iframe>
+            </div>
+
+            <pre><code>&lt;div class=&quot;embed-wrap&quot;&gt;
+  &lt;iframe width=&quot;425&quot; height=&quot;350&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; src=&quot;https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=bristol&amp;aq=&amp;sll=51.468489,-2.590709&amp;sspn=0.321233,0.837021&amp;ie=UTF8&amp;hq=&amp;hnear=Bristol,+City+of+Bristol,+United+Kingdom&amp;ll=51.468552,-2.590714&amp;spn=0.321332,0.837021&amp;t=m&amp;z=11&amp;output=embed&amp;iwloc=near&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Generic iFrame</h4>
+
+            <div class="embed-wrap">
+              <iframe
+                src="http://alistapart.com/article/responsive-web-design/"
+                style="border: 0"
+              ></iframe>
+            </div>
+
+            <pre><code>&lt;div class=&quot;embed-wrap&quot;&gt;
+  &lt;iframe src=&quot;http://alistapart.com/article/responsive-web-design/&quot; style=&quot;border:0&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="forms">
+            <h2 class="docs__heading">Forms <code>components/_forms.scss</code></h2>
+
+            <p>
+              Default styles of form elements including labels, inputs, checkbox and radio controls,
+              selects, fieldsets and legends.
+            </p>
+
+            <h4>Fieldset</h4>
+
+            <form>
+              <fieldset>
+                <legend>Legend</legend>
+                <div class="form__row">
+                  <label for="fieldset-example">label:</label>
+                  <input type="text" id="fieldset-example" placeholder="Placeholder text example" />
+                </div>
+              </fieldset>
+            </form>
+
+            <pre><code>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Legend&lt;/legend&gt;
+      &lt;div class=&quot;form__row&quot;&gt;
+        &lt;label for=&quot;fieldset-example&quot;&gt;label:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;fieldset-example&quot; placeholder=&quot;Placeholder text example&quot;&gt;
+      &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+
+            <h4>Form elements</h4>
+
+            <form>
+              <div class="form__row">
+                <label for="text-input">Text input:</label>
+                <input type="text" id="text-input" placeholder="Text input" />
+              </div>
+
+              <div class="form__row">
+                <label for="date-input">Date input:</label>
+                <input type="date" id="date-input" placeholder="Date input" />
+              </div>
+
+              <div class="form__row">
+                <label for="email-input">Email input:</label>
+                <input type="email" id="email-input" placeholder="Email input" />
+              </div>
+
+              <div class="form__row">
+                <label for="number-input">Number input:</label>
+                <input type="number" id="number-input" placeholder="Number input" />
+              </div>
+
+              <div class="form__row">
+                <label for="password-input">Password input:</label>
+                <input type="password" id="password-input" placeholder="Password input" />
+              </div>
+
+              <div class="form__row">
+                <label for="search-input">Search input:</label>
+                <input type="search" id="search-input" placeholder="Search input" />
+              </div>
+
+              <div class="form__row">
+                <label for="tel-input">Telephone input:</label>
+                <input type="tel" id="tel-input" placeholder="Telephone input" />
+              </div>
+
+              <div class="form__row">
+                <label for="url-input">URL input:</label>
+                <input type="url" id="url-input" placeholder="URL input" />
+              </div>
+
+              <div class="form__row">
+                <label for="disabled-input">Disabled:</label>
+                <input type="text" id="disabled-input" disabled placeholder="Disabled" />
+              </div>
+
+              <div class="form__row">
+                <label for="textarea">Text area:</label>
+                <textarea id="textarea" placeholder="Write your message..."></textarea>
+              </div>
+
+              <div class="form__row">
+                <label>Select an option:</label>
+                <select>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+
+              <div class="form__row">
+                <label>
+                  <input type="checkbox" />
+                  Check box option
+                </label>
+              </div>
+
+              <div class="form__row">
+                <label>
+                  <input type="radio" name="radio" />
+                  Radio option
+                </label>
+              </div>
+
+              <input type="submit" value="Submit" />
+            </form>
+
+            <pre><code>&lt;form&gt;
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;text-input&quot;&gt;Text input:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;text-input&quot; placeholder=&quot;Text input&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;date-input&quot;&gt;Date input:&lt;/label&gt;
+    &lt;input type=&quot;date&quot; id=&quot;date-input&quot; placeholder=&quot;Date input&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;email-input&quot;&gt;Email input:&lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email-input&quot; placeholder=&quot;Email input&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;number-input&quot;&gt;Number input:&lt;/label&gt;
+    &lt;input type=&quot;number&quot; id=&quot;number-input&quot; placeholder=&quot;Number input&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;password-input&quot;&gt;Password input:&lt;/label&gt;
+    &lt;input type=&quot;password&quot; id=&quot;password-input&quot; placeholder=&quot;Password input&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;search-input&quot;&gt;Search input:&lt;/label&gt;
+    &lt;input type=&quot;search&quot; id=&quot;search-input&quot; placeholder=&quot;Search input&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;tel-input&quot;&gt;Telephone input:&lt;/label&gt;
+    &lt;input type=&quot;tel&quot; id=&quot;tel-input&quot; placeholder=&quot;Telephone input&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;url-input&quot;&gt;URL input:&lt;/label&gt;
+    &lt;input type=&quot;url&quot; id=&quot;url-input&quot; placeholder=&quot;URL input&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;disabled-input&quot;&gt;Disabled:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;disabled-input&quot; disabled placeholder=&quot;Disabled&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;textarea&quot;&gt;Text area:&lt;/label&gt;
+    &lt;textarea id=&quot;textarea&quot; placeholder=&quot;Write your message...&quot;&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label&gt;Select an option:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;Option 1&lt;/option&gt;
+      &lt;option&gt;Option 2&lt;/option&gt;
+      &lt;option&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+      Check box option
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+      Radio option
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+
+            <h4>Form Inline</h4>
+
+            <form class="form--inline">
+              <div class="form__row">
+                <label for="inline-input">Name</label>
+                <input type="text" id="inline-input" placeholder="Your name" />
+              </div>
+
+              <div class="form__row">
+                <label for="inline-input2">Email</label>
+                <input type="text" id="inline-input2" placeholder="Your email" />
+              </div>
+
+              <div class="form__row--controls">
+                <label>
+                  <input type="checkbox" />
+                  Check box option
+                </label>
+              </div>
+
+              <div class="form__row--actions">
+                <input type="submit" value="Submit" />
+              </div>
+            </form>
+
+            <pre><code>&lt;form class=&quot;form--inline&quot;&gt;
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;inline-input&quot;&gt;Name&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;inline-input&quot; placeholder=&quot;Your name&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row&quot;&gt;
+    &lt;label for=&quot;inline-input2&quot;&gt;Email&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;inline-input2&quot; placeholder=&quot;Your email&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row--controls&quot;&gt;
+    &lt;label&gt;
+      &lt;input type=&quot;checkbox&quot;&gt;
+      Check box option
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form__row--actions&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="lists">
+            <h2 class="docs__heading">Lists <code>components/_lists.scss</code></h2>
+
+            <h4>Unordered</h4>
+
+            <ul>
+              <li>
+                One
+                <ul>
+                  <li>One nested</li>
+                  <li>
+                    Two nested
+                    <ul>
+                      <li>One nested</li>
+                      <li>Two nested</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Two</li>
+              <li>Three</li>
+            </ul>
+
+            <pre><code>&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+            <h4>Ordered</h4>
+
+            <ol>
+              <li>
+                One
+                <ol>
+                  <li>One nested</li>
+                  <li>
+                    Two nested
+                    <ol>
+                      <li>One nested</li>
+                      <li>Two nested</li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li>Two</li>
+              <li>Three</li>
+            </ol>
+
+            <pre><code>&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+            <h4>Definition</h4>
+
+            <dl>
+              <dt>Term 1</dt>
+              <dd>Definition of term 1</dd>
+              <dt>Term 2</dt>
+              <dd>Definition of term 2</dd>
+              <dt>Term 3</dt>
+              <dd>Definition of term 3</dd>
+            </dl>
+
+            <pre><code>&lt;dl&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+
+            <h4>Unstyled</h4>
+
+            <ul class="list--unstyled">
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+            </ul>
+
+            <pre><code>&lt;ul class="list--unstyled"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+            <h4>Inline</h4>
+
+            <ul class="list--inline">
+              <li>One</li>
+              <li>Two</li>
+              <li>Three</li>
+            </ul>
+
+            <pre><code>&lt;ul class="list--inline"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="media-objects">
+            <h2 class="docs__heading">Media / Flag objects <code>components/_media.scss</code></h2>
+
+            <p>
+              The
+              <a
+                href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code"
+                >media object</a
+              >
+              places any image (item) and text content side by side.
+            </p>
+
+            <p>
+              The <a href="http://csswizardry.com/2013/05/the-flag-object/">flag object</a> places
+              any image (item) and text content side by side with vertical alignment.
+            </p>
+
+            <h4>Media default</h4>
+
+            <div class="media">
+              <img
+                class="media__item example-mediaBlock__img"
+                src="img/min/16x9-img-placholder.png"
+                alt="Place holder for media object"
+              />
+              <p class="media__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+
+            <pre><code>&lt;div class=&quot;media&quot;&gt;
+  &lt;img class=&quot;media__item&quot; src=&quot;img/min/16x9-img-placholder.png&quot; alt=&quot;Place holder for media object&quot;&gt;
+  &lt;p class=&quot;media__body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Media reversed</h4>
+
+            <div class="media">
+              <img
+                class="media__item--reversed example-mediaBlock__img"
+                src="img/min/16x9-img-placholder.png"
+                alt="Place holder for media object"
+              />
+              <p class="media__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+
+            <pre><code>&lt;div class=&quot;media&quot;&gt;
+  &lt;img class=&quot;media__item--reversed&quot; src=&quot;img/min/16x9-img-placholder.png&quot; alt=&quot;Place holder for media object&quot;&gt;
+  &lt;p class=&quot;media__body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Flag default</h4>
+
+            <div class="flag">
+              <div class="flag__item">
+                <img
+                  src="img/min/16x9-img-placholder.png"
+                  alt="Place holder for glag object"
+                  width="120"
+                />
+              </div>
+              <div class="flag__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+
+            <pre><code>&lt;div class=&quot;flag&quot;&gt;
+  &lt;div class=&quot;flag__item&quot;&gt;
+    &lt;img src=&quot;img/min/16x9-img-placholder.png&quot; alt=&quot;Place holder for glag object&quot; width=&quot;120&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;flag__body&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Flag top</h4>
+
+            <div class="flag flag--top">
+              <div class="flag__item">
+                <img
+                  src="img/min/16x9-img-placholder.png"
+                  alt="Place holder for glag object"
+                  width="120"
+                />
+              </div>
+              <div class="flag__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+
+            <pre><code>&lt;div class=&quot;flag flag--top&quot;&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Flag bottom</h4>
+
+            <div class="flag flag--bottom">
+              <div class="flag__item">
+                <img
+                  src="img/min/16x9-img-placholder.png"
+                  alt="Place holder for glag object"
+                  width="120"
+                />
+              </div>
+              <div class="flag__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+
+            <pre><code>&lt;div class=&quot;flag flag--bottom&quot;&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Flag reversed</h4>
+
+            <div class="flag flag--reversed">
+              <div class="flag__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <div class="flag__item">
+                <img
+                  src="img/min/16x9-img-placholder.png"
+                  alt="Place holder for glag object"
+                  width="120"
+                />
+              </div>
+            </div>
+
+            <pre><code>&lt;div class=&quot;flag flag--reversed&quot;&gt;
+  &lt;div class=&quot;flag__body&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;flag__item&quot;&gt;
+    &lt;img src=&quot;img/min/16x9-img-placholder.png&quot; alt=&quot;Place holder for glag object&quot; width=&quot;120&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Flag reversed top</h4>
+
+            <div class="flag flag--reversed flag--top">
+              <div class="flag__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <div class="flag__item">
+                <img
+                  src="img/min/16x9-img-placholder.png"
+                  alt="Place holder for glag object"
+                  width="120"
+                />
+              </div>
+            </div>
+
+            <pre><code>&lt;div class=&quot;flag flag--reversed flag--top&quot;&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+
+            <h4>Flag reversed bottom</h4>
+
+            <div class="flag flag--reversed flag--bottom">
+              <div class="flag__body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <div class="flag__item">
+                <img
+                  src="img/min/16x9-img-placholder.png"
+                  alt="Place holder for glag object"
+                  width="120"
+                />
+              </div>
+            </div>
+
+            <pre><code>&lt;div class=&quot;flag flag--reversed flag--bottom&quot;&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="pagination">
+            <h2 class="docs__heading">Pagination <code>components/_pagination.scss</code></h2>
+
+            <p>
+              The pagination component provides styles for any project that contains long content
+              which requires spliting up into shorter, easier to understand blocks.
+            </p>
+
+            <ul class="pager">
+              <li><a href="#">&lt;</a></li>
+              <li class="pager--current"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">&gt;</a></li>
+            </ul>
+
+            <pre><code>&lt;ul class=&quot;pager&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;pager--current&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="tables">
+            <h2 class="docs__heading">Tables <code>components/_tables.scss</code></h2>
+
+            <h4>Basic</h4>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Posistion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>11</td>
+                  <td>Mesut Özil</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Jack Wilshere</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Olivier Giroud</td>
+                  <td>Forward</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre><code>&lt;table class=&quot;table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Posistion&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;Mesut Özil&lt;/td&gt;
+      &lt;td&gt;Midfielder&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;Jack Wilshere&lt;/td&gt;
+      &lt;td&gt;Midfielder&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;Olivier Giroud&lt;/td&gt;
+      &lt;td&gt;Forward&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+            <h4>Stripes</h4>
+
+            <table class="table--stripes">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Posistion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>11</td>
+                  <td>Mesut Özil</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Jack Wilshere</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Olivier Giroud</td>
+                  <td>Forward</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre><code>&lt;table class=&quot;table--stripes&quot;&gt;
+  ...
+&lt;/table&gt;
+</code></pre>
+
+            <h4>Bordered rows</h4>
+
+            <table class="table--border-rows">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Posistion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>11</td>
+                  <td>Mesut Özil</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Jack Wilshere</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Olivier Giroud</td>
+                  <td>Forward</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre><code>&lt;table class=&quot;table--border-rows&quot;&gt;
+  ...
+&lt;/table&gt;
+</code></pre>
+
+            <h4>Bordered cells</h4>
+
+            <table class="table--border-cells">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Posistion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>11</td>
+                  <td>Mesut Özil</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Jack Wilshere</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Olivier Giroud</td>
+                  <td>Forward</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre><code>&lt;table class=&quot;table--border-cells&quot;&gt;
+  ...
+&lt;/table&gt;
+</code></pre>
+
+            <h4>Condensed</h4>
+
+            <table class="table--condensed">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Posistion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>11</td>
+                  <td>Mesut Özil</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Jack Wilshere</td>
+                  <td>Midfielder</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Olivier Giroud</td>
+                  <td>Forward</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <pre><code>&lt;table class=&quot;table--condensed&quot;&gt;
+  ...
+&lt;/table&gt;
+</code></pre>
+
+            <h4>Responsive</h4>
+
+            <p>
+              To make any table responsive, wrap the <code>&lt;table&gt;</code> in a
+              <code>&lt;div&gt;</code> with the class <code>.table--responsive</code>
+            </p>
+
+            <div class="table--responsive">
+              <table class="table--stripes">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Posistion</th>
+                    <th>Country</th>
+                    <th>DOB</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>11</td>
+                    <td>Mesut Özil</td>
+                    <td>Midfielder</td>
+                    <td>Germany</td>
+                    <td>15/10/1988</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Jack Wilshere</td>
+                    <td>Midfielder</td>
+                    <td>England</td>
+                    <td>1/1/1992</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>Olivier Giroud</td>
+                    <td>Forward</td>
+                    <td>France</td>
+                    <td>30/9/1986</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <pre><code>&lt;div class=&quot;table--responsive&quot;&gt;
+  &lt;table class=&quot;table--stripes&quot;&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+          </section>
+
+          <hr class="hr-alt" />
+
+          <section class="docs__item" id="utilities">
+            <h2 class="docs__heading">Utilities</h2>
+
+            <p>
+              This folder contains the project variables, mixins, functions and the helper classes.
+            </p>
+          </section>
+
+          <section class="docs__item" id="variables">
+            <h2 class="docs__heading">Variables <code>utils/_variables.scss</code></h2>
+
+            <p>
+              This file contains all your project variables. The default variables included are
+              (please expand on default variables):-
+            </p>
+
+            <ul>
+              <li>Font base size</li>
+              <li>Spacing</li>
+              <li>Fonts</li>
+              <li>Colours</li>
+              <li>Placeholder text colour</li>
+              <li>Breakpoints</li>
+            </ul>
+          </section>
+
+          <section class="docs__item" id="helpers">
+            <h2 class="docs__heading">Helpers <code>utils/_helpers.scss</code></h2>
+
+            <p>This file contains all your helper classes.</p>
+
+            <h4>Clearfix</h4>
+            <p>
+              The <code>.clearfix</code> class clears floats. You can add this class to a tag or use
+              <code>@extend</code>.
+            </p>
+
+            <pre><code>&lt;div class=&quot;clearfix&quot;&gt;
+  ...
+&lt;/div&gt;
+
+.someClass {
+  @extend %clearfix;
+}
+</code></pre>
+
+            <h4>Align</h4>
+
+            <p>You can add these classes to a tag or use <code>@extend</code>.</p>
+
+            <p class="align-left">Align left</p>
+
+            <p class="align-center">Align center</p>
+
+            <p class="align-right">Align right</p>
+
+            <p class="justify">
+              <strong>Justify text</strong>. All right me luvver ipsum dolor sit amet dolor dolore
+              non gashead jammer veniam, me luvver tamorra dint aute as-dal. Dint fugiat ut culpa
+              jammy cheers drive. In warter wheres attoo ut oozee idut, ceptible irure. Yer
+              discolated ginormous, bemmie you gone and done it hark at ee fornbree excepteur glider
+              me babber. Ginormous hark at ee mint in it casnt.
+            </p>
+
+            <pre><code>&lt;p class=&quot;align-left&quot;&gt;...&lt;/p&gt;
+
+&lt;p class=&quot;align-center&quot;&gt;...&lt;/p&gt;
+
+&lt;p class=&quot;align-right&quot;&gt;...&lt;/p&gt;
+
+&lt;p class=&quot;justify&quot;&gt;...&lt;/p&gt;
+
+@extend:
+&lt;p class=&quot;example&quot;&gt;...&lt;/p&gt;
+
+.example {
+  color: red;
+  @extend %align-right;
+}
+</code></pre>
+
+            <h4>Floats</h4>
+
+            <p>You can add these classes to a tag or use <code>@extend</code>.</p>
+
+            <div class="clearfix">
+              <div class="float-left">Float left</div>
+              <div class="float-center" style="width: 280px; clear: left">
+                Float center <small>must have <code>width</code> set</small>.
+              </div>
+              <div class="float-right">Float right</div>
+            </div>
+
+            <pre><code>&lt;div class=&quot;float-left&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;float-center&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;float-right&quot;&gt;...&lt;/div&gt;
+</code></pre>
+
+            <h4>Spacing</h4>
+
+            <p>You can add these classes to a tag or use <code>@extend</code>.</p>
+
+            <pre><code>.no-margin - No margin or padding
+.space - Margin on all sides
+.space-top - Margin on the top
+.space-right - Margin on the right
+.space-btm - Margin on the bottom
+.space-left - Margin on the left
+</code></pre>
+
+            <h4>General</h4>
+
+            <p>You can add these classes to a tag or use <code>@extend</code>.</p>
+
+            <pre><code>.img-center - To center an image.
+.is-uppercase - To make text uppercase.
+</code></pre>
+
+            <h4>Visual</h4>
+
+            <p>You can add these classes to a tag or use <code>@extend</code>.</p>
+
+            <pre><code>.hide - Hide from browsers and screenreaders.
+.visuallyhidden - Hide visually, but available for screenreaders.
+</code></pre>
+          </section>
+
+          <section class="docs__item" id="mixins">
+            <h2 class="docs__heading">Mixins <code>utils/_mixins.scss</code></h2>
+
+            <h4>Include breakpoints</h4>
+
+            <p>
+              Generates media-quieries using min-width. You can pass in variables e.g
+              <code>$tablet-wide</code> or values e.g <code>560px</code>
+            </p>
+
+            <pre><code>.someClass {
+  color: red;
+
+  @include respond-min($tablet-wide) {
+    color: blue;
+  }
+}
+</code></pre>
+
+            <h4>Ghost buttons</h4>
+
+            <p>
+              Use this mixin to create styles for your 'ghost' button. The mixin sets the text and
+              border color. You can use variables or any colour values.
+            </p>
+
+            <button class="example-btn">Example</button>
+
+            <pre><code>&lt;button class=&quot;example-btn&quot;&gt;Example&lt;/button&gt;
+
+.example-btn {
+  @include ghost-btn($color-secondary)
+}
+</code></pre>
+
+            <h4>Gradients</h4>
+
+            <p>
+              Use this mixin to create styles for your two colour gradients. You need to include the
+              angle of your gradient and the start and stop colour. You can use variables or any
+              colour values.
+            </p>
+
+            <div class="example-gradient"></div>
+
+            <pre><code>&lt;div class=&quot;example-gradient&quot;&gt;&lt;/div&gt;
+
+.example-gradient {
+  @include gradient(90, $color-primary, $color-secondary);
+  height: 5rem;
+}
+</code></pre>
+
+            <h4>Icons</h4>
+
+            <p><a href="#font-awesome" data-scroll>See Font awesome</a></p>
+          </section>
+
+          <section class="docs__item" id="functions">
+            <h2 class="docs__heading">Functions <code>utils/_functions.scss</code></h2>
+
+            <h4>Tint</h4>
+
+            <p>The tint function slightly lightens a colour.</p>
+
+            <div class="swatch">
+              <div class="swatch__colour bg-primary"></div>
+              <div class="swatch__text">Primary</div>
+            </div>
+
+            <div class="swatch">
+              <div class="swatch__colour tint-example"></div>
+              <div class="swatch__text">lighten by 20%</div>
+            </div>
+
+            <pre><code>// lighten $color-primary by 20%
+.tint-example {
+  background-color: tint($color-primary, 20%);
+}
+</code></pre>
+
+            <h4>Shade</h4>
+
+            <p>The shade function slightly darkens a colour.</p>
+
+            <div class="swatch">
+              <div class="swatch__colour bg-primary"></div>
+              <div class="swatch__text">Primary</div>
+            </div>
+
+            <div class="swatch">
+              <div class="swatch__colour shade-example"></div>
+              <div class="swatch__text">darken by 20%</div>
+            </div>
+
+            <pre><code>// darken $color-primary by 20%
+.shade-example {
+  background-color: shade($color-primary, 20%);
+}
+</code></pre>
+          </section>
+
+          <hr class="hr-alt" />
+
+          <section class="docs__item" id="vendor">
+            <h2 class="docs__heading">Vendor</h2>
+          </section>
+
+          <section class="docs__item" id="font-awesome">
+            <h2 class="docs__heading">Font awesome <code>vendors/_font-awesome.scss</code></h2>
+
+            <p>
+              Outline comes with the excellent
+              <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icons (4.5)
+              included. Outline uses Font Awesome with mixins for adding icons to semantic HTML and
+              without loading every single icon class definition when you only use some of the
+              icons.
+            </p>
+
+            <p>This is the default mixin for an icon.</p>
+
+            <pre><code>@mixin icon($icon) {
+  @extend %icon;
+  @extend %icon-#{$icon};
+}
+</code></pre>
+
+            <p>
+              This icon mixin adds padding to the right. You can use the default value set in mixin
+              (.5rem) or specify your own value. For example you could use this for an icon in a
+              button
+            </p>
+
+            <pre><code>@mixin icon-before($icon, $padding: .5rem) {
+  &:before {
+    @extend %icon;
+    @extend %icon-#{$icon};
+    padding-right: $padding;
+  }
+}
+</code></pre>
+
+            <h4>Examples</h4>
+
+            <div class="subway-sign">
+              <i class="subway-sign__icon"></i>
+              <span class="subway-sign__text">Subway</span>
+            </div>
+
+            <pre><code>&lt;div class=&quot;subway-sign&quot;&gt;
+  &lt;i class=&quot;subway-sign__icon&quot;&gt;&lt;/i&gt;
+  &lt;span class=&quot;subway-sign__text&quot;&gt;Subway&lt;/span&gt;
+&lt;/div&gt;
+
+.subway-sign {
+  width: 8rem;
+  padding: $spacing;
+  background-color: $color-grey-dark;
+  text-align: center;
+  color: #fff;
+
+  .subway-sign__icon {
+    @include icon(subway);
+    display: block;
+    font-size: 3rem;
+    margin-bottom: .5rem;
+  }
+
+  .subway-sign__text {
+    font-family: $font-secondary;
+    font-size: 1.25rem;
+  }
+}
+</code></pre>
+
+            <button class="btn--large download">Download</button>
+
+            <pre><code>&lt;button class=&quot;btn--large download&quot;&gt;Download&lt;/button&gt;
+
+.download {
+  @include icon-before(cloud-download, .75rem)
+}
+</code></pre>
+          </section>
+
+          <hr class="hr-alt" />
+
+          <footer class="footer docs__item clearfix">
+            <div class="container">
+              Outline is a project by <a href="http://www.matt-harris.net">Matt Harris</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i.GoogleAnalyticsObject = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-49516749-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script src="js/min/bundle.js"></script>
+    <script>
+      smoothScroll.init({
+        speed: 800,
+        easing: 'easeOutQuad',
+        updateURL: false,
+      });
+    </script>
+  </body>
+</html>
